@@ -1,0 +1,9 @@
+# Astro build artifacts
+astro-site/dist/
+astro-site/.astro/
+
+# Dependencies
+astro-site/node_modules/
+
+# Logs
+*.log
