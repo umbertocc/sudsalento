@@ -566,7 +566,8 @@ Pescoluse è circondata da località meravigliose facilmente raggiungibili.
  if (!iconEl) return;
  const text = (item.textContent || '').toLowerCase();
  const match = rules.find((rule) => rule.regex.test(text));
- const icon = match ? match.icon : '\\u{2705}';
+ const rawIcon = match ? match.icon : '\\u{2705}';
+ const icon = rawIcon.replace(/\\u\{([0-9A-Fa-f]+)\}/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)));
  iconEl.style.setProperty('--feature-icon', `'${icon}'`);
  });
  document.querySelectorAll('.info-grid .info-card').forEach((card) => {
@@ -574,7 +575,8 @@ Pescoluse è circondata da località meravigliose facilmente raggiungibili.
  if (!iconEl) return;
  const text = (card.textContent || '').toLowerCase();
  const match = infoRules.find((rule) => rule.regex.test(text));
- const icon = match ? match.icon : '\\u{2705}';
+ const rawIcon = match ? match.icon : '\\u{2705}';
+ const icon = rawIcon.replace(/\\u\{([0-9A-Fa-f]+)\}/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)));
  iconEl.style.setProperty('--info-icon', `'${icon}'`);
  });
 })();

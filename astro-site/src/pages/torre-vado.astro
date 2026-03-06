@@ -315,14 +315,14 @@ La posizione di Torre Vado permette di esplorare facilmente tutte le attrazioni 
 <div class="feature-item">
 <div class="feature-item-icon"></div>
 <div>
-<strong>Torre Pali (2 km)</strong><br>
+<strong>Torre Pali (5 km)</strong><br>
 <span style="color: #555;">Isola della Fanciulla, spiagge Bandiera Blu</span>
 </div>
 </div>
 <div class="feature-item">
 <div class="feature-item-icon"></div>
 <div>
-<strong>Pescoluse (5 km)</strong><br>
+<strong>Pescoluse (2 km)</strong><br>
 <span style="color: #555;">Maldive del Salento, sabbia bianca</span>
 </div>
 </div>
@@ -519,7 +519,8 @@ Parcheggi a pagamento disponibili vicino al porto e alla piscina naturale. Duran
  if (!iconEl) return;
  const text = (item.textContent || '').toLowerCase();
  const match = rules.find((rule) => rule.regex.test(text));
- const icon = match ? match.icon : '\\u{2705}';
+ const rawIcon = match ? match.icon : '\\u{2705}';
+ const icon = rawIcon.replace(/\\u\{([0-9A-Fa-f]+)\}/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)));
  iconEl.style.setProperty('--feature-icon', `'${icon}'`);
  });
  document.querySelectorAll('.info-grid .info-card').forEach((card) => {
@@ -527,7 +528,8 @@ Parcheggi a pagamento disponibili vicino al porto e alla piscina naturale. Duran
  if (!iconEl) return;
  const text = (card.textContent || '').toLowerCase();
  const match = infoRules.find((rule) => rule.regex.test(text));
- const icon = match ? match.icon : '\\u{2705}';
+ const rawIcon = match ? match.icon : '\\u{2705}';
+ const icon = rawIcon.replace(/\\u\{([0-9A-Fa-f]+)\}/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)));
  iconEl.style.setProperty('--info-icon', `'${icon}'`);
  });
 })();

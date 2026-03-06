@@ -1,43 +1,47 @@
 ﻿<!DOCTYPE html>
-<html lang="it">
-<head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
-<!-- End Google Tag Manager -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta name="language" content="Italian">
-<meta name="author" content="Spiagge del Salento">
-<link rel="canonical" href="https://spiaggedelsalento.it/punta-prosciutto">
-<title>Punta Prosciutto - Dune Sabbiose e Mare Caraibico | Porto Cesareo</title>
-<meta name="description" content="Punta Prosciutto: dune sabbiose, pineta mediterranea, mare turchese caraibico. Spiaggia incontaminata ideale per famiglie.">
-<meta name="keywords" content="punta prosciutto, porto cesareo, dune sabbiose, pineta mediterranea, mare turchese, spiaggia libera, salento, puglia, maldive salento">
-<!-- Open Graph Tags -->
-<meta property="og:title" content="Punta Prosciutto - Dune Sabbiose e Mare Caraibico">
-<meta property="og:description" content="Dune sabbiose naturali, pineta mediterranea e mare turchese caraibico. Atmosfera selvaggia e incontaminata.">
-<meta property="og:url" content="https://spiaggedelsalento.it/punta-prosciutto">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<!-- Favicon e Logo -->
-<link rel="icon" type="image/png" sizes="32x32" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="shortcut icon" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="twitter:title" content="Punta Prosciutto - Dune Sabbiose e Mare Caraibico">
-<meta name="twitter:description" content="Oasi naturale con dune, pineta e mare turchese. Una delle spiagge più belle del Salento.">
-<meta name="twitter:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(() => {
+	if (window.__siteNavInitialized) return;
+	window.__siteNavInitialized = true;
+
+	window.toggleMenu = function toggleMenu() {
+		const menu = document.getElementById('navbarMenu');
+		if (!menu) return;
+		menu.classList.toggle('active');
+	};
+
+	window.closeMenu = function closeMenu() {
+		const menu = document.getElementById('navbarMenu');
+		if (!menu) return;
+		menu.classList.remove('active');
+		const dropdown = document.querySelector('.dropdown');
+		if (dropdown) dropdown.classList.remove('active');
+	};
+
+	document.addEventListener('click', (event) => {
+		const navbar = document.querySelector('.navbar');
+		const menu = document.getElementById('navbarMenu');
+		if (!navbar || !menu) return;
+		if (!navbar.contains(event.target) && menu.classList.contains('active')) {
+			menu.classList.remove('active');
+			const dropdown = document.querySelector('.dropdown');
+			if (dropdown) dropdown.classList.remove('active');
+		}
+	});
+
+	const dropdownToggle = document.querySelector('.dropdown-toggle');
+	const dropdown = document.querySelector('.dropdown');
+	if (dropdownToggle && dropdown) {
+		dropdownToggle.addEventListener('click', (event) => {
+			if (window.innerWidth <= 768) {
+				event.preventDefault();
+				event.stopPropagation();
+				dropdown.classList.toggle('active');
+			}
+		});
+	}
+})();
+</script>
 <style>
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -429,41 +433,6 @@ Parcheggi sterrati liberi lungo la strada di accesso alla spiaggia. In alta stag
 <p>&copy; 2026 Spiagge del Salento. Tutti i diritti riservati.</p>
 </div>
 </footer>
- <script>
-// Menu Hamburger
-function toggleMenu() {
- const menu = document.getElementById('navbarMenu');
- menu.classList.toggle('active');
-}
- function closeMenu() {
- const menu = document.getElementById('navbarMenu');
- menu.classList.remove('active');
-}
- // Dropdown mobile
-document.addEventListener('DOMContentLoaded', function() {
- const dropdownToggle = document.querySelector('.dropdown-toggle');
- const dropdown = document.querySelector('.dropdown');
- if (dropdownToggle) {
- dropdownToggle.addEventListener('click', function(e) {
- if (window.innerWidth <= 768) {
- e.preventDefault();
- e.stopPropagation();
- dropdown.classList.toggle('active');
- }
- });
- }
-});
- // Chiudi menu quando si clicca fuori
-document.addEventListener('click', function(event) {
- const navbar = document.querySelector('.navbar');
- const menu = document.getElementById('navbarMenu');
- const dropdown = document.querySelector('.dropdown');
- if (!navbar.contains(event.target) && menu.classList.contains('active')) {
- menu.classList.remove('active');
- if (dropdown) dropdown.classList.remove('active');
- }
-});
-</script>
  </body>
 </html>
 

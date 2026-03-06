@@ -1,43 +1,47 @@
 ﻿<!DOCTYPE html>
-<html lang="it">
-<head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
-<!-- End Google Tag Manager -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta name="language" content="Italian">
-<meta name="author" content="Affitti Torre Pali">
-<link rel="canonical" href="https://spiaggedelsalento.it/pescoluse">
-<title>Pescoluse - Maldive del Salento | Spiaggia Bianca e Mare Turchese</title>
-<meta name="description" content="Pescoluse, le Maldive del Salento: spiaggia di sabbia bianchissima, mare turchese e fondali caraibici. Scopri la spiaggia più bella della Puglia!">
-<meta name="keywords" content="pescoluse, maldive del salento, spiaggia pescoluse, mare pescoluse, sabbia bianca salento, spiaggia tropicale puglia, lido marini, torre pali, salve, salento mare, vacanze pescoluse, maldive puglia">
-<!-- Open Graph Tags -->
-<meta property="og:title" content="Pescoluse - Maldive del Salento | Spiaggia Caraibica">
-<meta property="og:description" content="Pescoluse: sabbia bianchissima e mare turchese, le vere Maldive del Salento. Scopri la spiaggia più bella della Puglia!">
-<meta property="og:url" content="https://spiaggedelsalento.it/pescoluse">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<!-- Favicon e Logo -->
-<link rel="icon" type="image/png" sizes="32x32" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="shortcut icon" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="twitter:title" content="Pescoluse - Maldive del Salento">
-<meta name="twitter:description" content="La spiaggia più bella del Salento: sabbia bianca e mare turchese come ai Caraibi.">
-<meta name="twitter:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(() => {
+	if (window.__siteNavInitialized) return;
+	window.__siteNavInitialized = true;
+
+	window.toggleMenu = function toggleMenu() {
+		const menu = document.getElementById('navbarMenu');
+		if (!menu) return;
+		menu.classList.toggle('active');
+	};
+
+	window.closeMenu = function closeMenu() {
+		const menu = document.getElementById('navbarMenu');
+		if (!menu) return;
+		menu.classList.remove('active');
+		const dropdown = document.querySelector('.dropdown');
+		if (dropdown) dropdown.classList.remove('active');
+	};
+
+	document.addEventListener('click', (event) => {
+		const navbar = document.querySelector('.navbar');
+		const menu = document.getElementById('navbarMenu');
+		if (!navbar || !menu) return;
+		if (!navbar.contains(event.target) && menu.classList.contains('active')) {
+			menu.classList.remove('active');
+			const dropdown = document.querySelector('.dropdown');
+			if (dropdown) dropdown.classList.remove('active');
+		}
+	});
+
+	const dropdownToggle = document.querySelector('.dropdown-toggle');
+	const dropdown = document.querySelector('.dropdown');
+	if (dropdownToggle && dropdown) {
+		dropdownToggle.addEventListener('click', (event) => {
+			if (window.innerWidth <= 768) {
+				event.preventDefault();
+				event.stopPropagation();
+				dropdown.classList.toggle('active');
+			}
+		});
+	}
+})();
+</script>
 <style>
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -458,45 +462,6 @@ Molti lidi offrono <strong>ristoranti con vista mare</strong> dove pranzare o ce
 </div>
  <div class="content-section">
 <h2>Come Arrivare a Pescoluse</h2>
- <h3>In Auto</h3>
-<p> <strong>Da Lecce:</strong> SS16 verso sud, poi SP358 direzione Leuca. Seguire indicazioni Pescoluse/Torre Pali (60 km, 50 minuti)<br> <strong>Da Gallipoli:</strong> SS274 verso sud (35 km, 35 minuti)<br> <strong>Da Brindisi:</strong> SS16 fino a Lecce, poi SS613 verso Gallipoli e SS274 verso sud (120 km, 1h 30min)<br> <strong>Da Santa Maria di Leuca:</strong> SP358 verso nord (15 km, 15 minuti)
-</p>
- <h3>Parcheggi</h3>
-<p>
-Lungo la strada litoranea e nelle vie adiacenti alla spiaggia si trovano <strong>parcheggi a pagamento</strong> custoditi. Prezzi indicativi: 3-5 al giorno. Si consiglia di arrivare presto la mattina (prima delle 9:30) per trovare posto facilmente, soprattutto in luglio e agosto.
-</p>
- <h3>Trasporti Pubblici</h3>
-<p>
-Durante l'estate, autobus di linea collegano Lecce con Pescoluse. Il servizio è limitato, verificare orari aggiornati su siti FSE e Salento in Bus.
-</p>
- <div class="highlight-box">
-<h3>Consigli Utili</h3>
-<p>
-✅ <strong>Alta Stagione (Luglio-Agosto):</strong> Arrivare entro le 9:00 per trovare parcheggio e posto in spiaggia<br>
-✅ <strong>Prenotazione:</strong> Alcuni lidi accettano prenotazioni online<br>
-✅ <strong>Attrezzatura:</strong> Portare crema solare, cappello e occhiali da sole<br>
-✅ <strong>Acqua:</strong> Bere molta acqua, il sole è molto forte<br>
-✅ <strong>Bassa Stagione:</strong> Giugno e settembre sono mesi ideali per evitare la folla
-</p>
-</div>
-</div>
- <div class="content-section">
-<h2>Dintorni da Esplorare</h2>
-<p>
-Pescoluse è circondata da località meravigliose facilmente raggiungibili.
-</p>
- <div class="features-list">
-<div class="feature-item">
-<div class="feature-item-icon"></div>
-<div> <strong>Torre Pali (3 km)</strong><br>
-<span style="color: #555;">Isola della Fanciulla, Bandiera Blu</span>
-</div>
-</div>
-<div class="feature-item">
-<div class="feature-item-icon"></div>
-<div> <strong>Torre Vado (5 km)</strong><br>
-<span style="color: #555;">Piscina naturale, porto turistico</span>
-</div>
 </div>
 <div class="feature-item">
 <div class="feature-item-icon"></div>
@@ -621,41 +586,6 @@ Pescoluse è circondata da località meravigliose facilmente raggiungibili.
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
  gtag('config', 'G-M0TEME57K0');
-</script>
- <script>
-// Menu Hamburger
-function toggleMenu() {
- const menu = document.getElementById('navbarMenu');
- menu.classList.toggle('active');
-}
- function closeMenu() {
- const menu = document.getElementById('navbarMenu');
- menu.classList.remove('active');
-}
- // Dropdown mobile
-document.addEventListener('DOMContentLoaded', function() {
- const dropdownToggle = document.querySelector('.dropdown-toggle');
- const dropdown = document.querySelector('.dropdown');
- if (dropdownToggle) {
- dropdownToggle.addEventListener('click', function(e) {
- if (window.innerWidth <= 768) {
- e.preventDefault();
- e.stopPropagation();
- dropdown.classList.toggle('active');
- }
- });
- }
-});
- // Chiudi menu quando si clicca fuori
-document.addEventListener('click', function(event) {
- const navbar = document.querySelector('.navbar');
- const menu = document.getElementById('navbarMenu');
- const dropdown = document.querySelector('.dropdown');
- if (!navbar.contains(event.target) && menu.classList.contains('active')) {
- menu.classList.remove('active');
- if (dropdown) dropdown.classList.remove('active');
- }
-});
 </script>
  </body>
 </html>

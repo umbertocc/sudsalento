@@ -82,3 +82,47 @@ const { guideHref = '/spiagge-salento' } = Astro.props;
   .navbar-container { padding: 14px 16px; }
 }
 </style>
+
+<script is:inline>
+(() => {
+  if (window.__siteNavInitialized) return;
+  window.__siteNavInitialized = true;
+
+  window.toggleMenu = function toggleMenu() {
+    const menu = document.getElementById('navbarMenu');
+    if (!menu) return;
+    menu.classList.toggle('active');
+  };
+
+  window.closeMenu = function closeMenu() {
+    const menu = document.getElementById('navbarMenu');
+    if (!menu) return;
+    menu.classList.remove('active');
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) dropdown.classList.remove('active');
+  };
+
+  document.addEventListener('click', (event) => {
+    const navbar = document.querySelector('.navbar');
+    const menu = document.getElementById('navbarMenu');
+    if (!navbar || !menu) return;
+    if (!navbar.contains(event.target) && menu.classList.contains('active')) {
+      menu.classList.remove('active');
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown) dropdown.classList.remove('active');
+    }
+  });
+
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdown = document.querySelector('.dropdown');
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', (event) => {
+      if (window.innerWidth <= 768) {
+        event.preventDefault();
+        event.stopPropagation();
+        dropdown.classList.toggle('active');
+      }
+    });
+  }
+})();
+</script>

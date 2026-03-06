@@ -128,7 +128,7 @@ A differenza delle più affollate località vicine, Lido Marini mantiene un'atmo
 </div>
  <h3>Posizione</h3>
 <p>
-Lido Marini si trova a <strong>6 km da Torre Pali</strong>, <strong>8 km da Pescoluse</strong> e <strong>50 km da Lecce</strong>. La località fa parte del territorio di Ugento, antica città messapica ricca di storia e cultura. La strada litoranea SP358 collega Lido Marini con tutte le principali spiagge del basso Salento.
+Lido Marini si trova a <strong>3 km da Torre Pali</strong>, <strong>8 km da Pescoluse</strong> e <strong>50 km da Lecce</strong>. La località fa parte del territorio di Ugento, antica città messapica ricca di storia e cultura. La strada litoranea SP358 collega Lido Marini con tutte le principali spiagge del basso Salento.
 </p>
 </div>
  <div class="content-section">
@@ -418,14 +418,14 @@ Lido Marini è un'ottima base per esplorare le bellezze del basso Salento.
 <div class="feature-item">
 <div class="feature-item-icon"></div>
 <div>
-<strong>Torre Pali (6 km)</strong><br>
+<strong>Torre Pali (3 km)</strong><br>
 <span style="color: #555;">Isola della Fanciulla, Bandiera Blu</span>
 </div>
 </div>
 <div class="feature-item">
 <div class="feature-item-icon"></div>
 <div>
-<strong>Pescoluse (8 km)</strong><br>
+<strong>Pescoluse (6 km)</strong><br>
 <span style="color: #555;">Maldive del Salento</span>
 </div>
 </div>
@@ -439,14 +439,14 @@ Lido Marini è un'ottima base per esplorare le bellezze del basso Salento.
 <div class="feature-item">
 <div class="feature-item-icon"></div>
 <div>
-<strong>Specchia (25 km)</strong><br>
+<strong>Specchia (15 km)</strong><br>
 <span style="color: #555;">Borgo più bello d'Italia</span>
 </div>
 </div>
 <div class="feature-item">
 <div class="feature-item-icon"></div>
 <div>
-<strong>Gallipoli (25 km)</strong><br>
+<strong>Gallipoli (30 km)</strong><br>
 <span style="color: #555;">Città vecchia, movida, spiagge</span>
 </div>
 </div>
@@ -625,7 +625,8 @@ Parcheggi gratuiti e a pagamento disponibili lungo la strada costiera e nelle vi
  if (!iconEl) return;
  const text = (item.textContent || '').toLowerCase();
  const match = rules.find((rule) => rule.regex.test(text));
- const icon = match ? match.icon : '\\u{2705}';
+ const rawIcon = match ? match.icon : '\\u{2705}';
+ const icon = rawIcon.replace(/\\u\{([0-9A-Fa-f]+)\}/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)));
  iconEl.style.setProperty('--feature-icon', `'${icon}'`);
  });
  document.querySelectorAll('.info-grid .info-card').forEach((card) => {
@@ -633,7 +634,8 @@ Parcheggi gratuiti e a pagamento disponibili lungo la strada costiera e nelle vi
  if (!iconEl) return;
  const text = (card.textContent || '').toLowerCase();
  const match = infoRules.find((rule) => rule.regex.test(text));
- const icon = match ? match.icon : '\\u{2705}';
+ const rawIcon = match ? match.icon : '\\u{2705}';
+ const icon = rawIcon.replace(/\\u\{([0-9A-Fa-f]+)\}/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)));
  iconEl.style.setProperty('--info-icon', `'${icon}'`);
  });
 })();
