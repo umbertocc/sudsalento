@@ -1,0 +1,646 @@
+﻿---
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+ <BaseLayout>
+<Fragment slot="head">
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="language" content="Italian">
+<meta name="author" content="Affitti Torre Pali">
+<link rel="canonical" href="https://spiaggedelsalento.it/lido-marini">
+<title>Lido Marini Salento | Pineta, Spiaggia Tranquilla e Natura</title>
+<meta name="description" content="Lido Marini: spiaggia tranquilla circondata da pineta, mare cristallino e atmosfera rilassante. La località ideale per famiglie nel Salento!">
+<meta name="keywords" content="lido marini, lido marini salento, spiaggia lido marini, pineta lido marini, ugento mare, mancaversa, salento ionico, vacanze lido marini, mare cristallino puglia, spiaggia tranquilla salento">
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Lido Marini Salento | Pineta e Tranquillità">
+<meta property="og:description" content="Lido Marini: spiaggia tranquilla immersa nella pineta, mare cristallino e atmosfera rilassante. Perfetto per famiglie.">
+<meta property="og:url" content="https://spiaggedelsalento.it/lido-marini">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<!-- Favicon e Logo -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="shortcut icon" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="twitter:title" content="Lido Marini Salento | Pineta e Tranquillità">
+<meta name="twitter:description" content="Spiaggia tranquilla circondata da pineta nel cuore del Salento ionico.">
+<meta name="twitter:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%); padding-top: 70px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 30px; }
+.back-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; margin-bottom: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transition: all 0.3s; }
+.back-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5); }
+header { text-align: center; margin-bottom: 50px; padding: 80px 20px; background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); color: white; border-radius: 30px; box-shadow: 0 20px 60px rgba(56, 161, 105, 0.3); animation: fadeIn 0.8s ease-out; }
+header h1 { font-size: 3.5em; margin-bottom: 15px; font-weight: 700; text-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.subtitle { font-size: 1.4em; color: rgba(255, 255, 255, 0.95); font-weight: 400; }
+.content-section { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 50px 40px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); margin-bottom: 40px; border: 1px solid rgba(14, 165, 233, 0.1); animation: fadeInUp 0.6s ease-out; }
+.content-section h2 { font-size: 2.5em; background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 25px; border-left: 5px solid transparent; border-image: linear-gradient(135deg, #38a169, #48bb78) 1; padding-left: 20px; font-weight: 700; }
+.content-section h3 { font-size: 1.6em; color: #38a169; margin: 30px 0 15px 0; font-weight: 600; }
+.content-section p { font-size: 1.15em; line-height: 1.8; color: #4a5568; margin-bottom: 20px; text-align: justify; }
+.highlight-box { background: linear-gradient(135deg, rgba(56, 161, 105, 0.1) 0%, rgba(72, 187, 120, 0.1) 100%); border-left: 5px solid #38a169; padding: 30px; border-radius: 20px; margin: 30px 0; box-shadow: 0 4px 15px rgba(56, 161, 105, 0.1); }
+.highlight-box h3 { color: #38a169; margin-top: 0; font-weight: 600; }
+.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 30px 0; }
+.info-card { background: linear-gradient(135deg, rgba(56, 161, 105, 0.05) 0%, rgba(72, 187, 120, 0.05) 100%); padding: 30px; border-radius: 20px; text-align: center; transition: all 0.4s; border: 1px solid rgba(56, 161, 105, 0.1); }
+.info-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(56, 161, 105, 0.2); background: linear-gradient(135deg, rgba(56, 161, 105, 0.1) 0%, rgba(72, 187, 120, 0.1) 100%); }
+.info-card-icon { font-size: 3em; margin-bottom: 15px; }
+.info-card-icon::before { content: var(--info-icon, '✨'); }
+.info-card h4 { background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; font-size: 1.3em; font-weight: 600; }
+.info-card p { color: #64748b; font-size: 1em; }
+.features-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 25px 0; }
+.feature-item { display: flex; align-items: center; gap: 15px; padding: 18px; background: rgba(56, 161, 105, 0.05); border-radius: 15px; border: 1px solid rgba(56, 161, 105, 0.1); transition: all 0.3s; }
+.feature-item:hover { background: rgba(56, 161, 105, 0.1); transform: translateX(5px); }
+.feature-item-icon { font-size: 2em; color: #38a169; }
+.feature-item-icon::before { content: var(--feature-icon, '✅'); }
+.cta-section { text-align: center; background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); color: white; padding: 60px 40px; border-radius: 30px; margin-top: 40px; box-shadow: 0 20px 60px rgba(56, 161, 105, 0.3); animation: fadeInUp 0.8s ease-out; }
+.cta-section h2 { font-size: 2.5em; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.cta-section p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.95; font-weight: 400; }
+.btn { display: inline-block; background: white; color: #38a169; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 10px; transition: all 0.3s; font-size: 1.1em; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); position: relative; overflow: hidden; }
+.btn::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); opacity: 0; transition: opacity 0.3s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); color: white; }
+.btn:hover::before { opacity: 1; }
+.btn span { position: relative; z-index: 1; }
+@media (max-width: 768px) {
+ .container { padding: 15px; }
+ header h1 { font-size: 2em; }
+ .subtitle { font-size: 1.1em; }
+ .info-grid { grid-template-columns: 1fr; }
+ .features-list { grid-template-columns: 1fr; }
+ .content-section { padding: 30px 20px; }
+}
+</style>
+ </Fragment>
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FP79B56"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Navbar -->
+<SiteNav guideHref="/spiagge-salento" />
+ <div class="container">
+<a href="/" class="back-btn">Torna alla homepage</a>
+ <header>
+<h1>Lido Marini</h1>
+<p class="subtitle">Pineta Mediterranea e Tranquillità sul Mare Ionio</p>
+</header>
+ <div class="content-section">
+<h2>Benvenuti a Lido Marini</h2>
+<p>
+<strong>Lido Marini</strong> è una tranquilla marina del comune di <strong>Ugento</strong>, situata sulla costa ionica del Salento. Questa località balneare si distingue per la sua caratteristica <strong>pineta mediterranea</strong> che abbraccia la spiaggia, creando un'atmosfera rilassante e un rifugio naturale dal caldo sole estivo.
+</p>
+<p>
+A differenza delle più affollate località vicine, Lido Marini mantiene un'atmosfera autentica e familiare, ideale per chi cerca una vacanza tranquilla a contatto con la natura. La presenza della pineta rende questo luogo particolarmente adatto alle famiglie con bambini, che possono giocare all'ombra dei pini marittimi godendo della brezza marina.
+</p>
+ <div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon"></div>
+<h4>Pineta</h4>
+<p>Ombra naturale e profumo di pini</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon"></div>
+<h4>Spiaggia Tranquilla</h4>
+<p>Meno affollata delle località vicine</p>
+</div>
+<div class="info-card">
+<div class="info-card-icon"></div>
+<h4>Family Friendly</h4>
+<p>Ideale per famiglie con bambini</p>
+</div>
+</div>
+ <h3>Posizione</h3>
+<p>
+Lido Marini si trova a <strong>6 km da Torre Pali</strong>, <strong>8 km da Pescoluse</strong> e <strong>50 km da Lecce</strong>. La località fa parte del territorio di Ugento, antica città messapica ricca di storia e cultura. La strada litoranea SP358 collega Lido Marini con tutte le principali spiagge del basso Salento.
+</p>
+</div>
+ <div class="content-section">
+<h2>La Pineta di Lido Marini</h2>
+<p>
+La vera protagonista di Lido Marini è la sua splendida <strong>pineta mediterranea</strong>, che si estende per diversi ettari lungo la costa. Questa area verde naturale offre ombra, frescura e un ambiente unico dove la macchia mediterranea incontra il mare.
+</p>
+ <h3>Caratteristiche della Pineta</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Pini Marittimi Secolari</strong><br>
+<span style="color: #555;">Alberi maestosi che offrono ombra naturale</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Sentieri e Passeggiate</strong><br>
+<span style="color: #555;">Percorsi tra i pini per camminare e correre</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Fauna e Flora</strong><br>
+<span style="color: #555;">Uccelli, lucertole, piante mediterranee</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Area Picnic</strong><br>
+<span style="color: #555;">Zone attrezzate per pranzi all'aperto</span>
+</div>
+</div>
+</div>
+ <p>
+La pineta è perfetta per <strong>passeggiate mattutine</strong>, <strong>jogging</strong>, <strong>yoga all'aria aperta</strong> e momenti di relax all'ombra durante le ore più calde. Il profumo dei pini marittimi, unito alla brezza marina, crea un'atmosfera terapeutica e rigenerante.
+</p>
+ <div class="highlight-box">
+<h3>Benefici della Pineta</h3>
+<p>
+✅ <strong>Ombra Naturale:</strong> Rifugio dal sole nelle ore più calde<br>
+✅ <strong>Aria Purificata:</strong> I pini rilasciano oli essenziali benefici<br>
+✅ <strong>Temperatura Fresca:</strong> Microclima più fresco di 3-5°C<br>
+✅ <strong>Atmosfera Rilassante:</strong> Suono del vento tra i pini<br>
+✅ <strong>Biodiversità:</strong> Habitat per numerose specie animali e vegetali
+</p>
+</div>
+</div>
+ <div class="content-section">
+<h2>La Spiaggia</h2>
+<p>
+La spiaggia di Lido Marini è caratterizzata da <strong>sabbia dorata</strong> morbida e <strong>mare cristallino</strong> con fondali bassi e digradanti. La presenza della pineta rende questa spiaggia unica, permettendo di alternare momenti al sole con soste rinfrescanti all'ombra degli alberi.
+</p>
+ <h3>Caratteristiche del Mare</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Acqua Cristallina</strong><br>
+<span style="color: #555;">Trasparenza eccellente, mare pulito</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Fondali Bassi</strong><br>
+<span style="color: #555;">Sicuri per bambini e non nuotatori</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Mare Calmo</strong><br>
+<span style="color: #555;">Generalmente tranquillo, poche onde</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Spiaggia Ampia</strong><br>
+<span style="color: #555;">Spazio abbondante anche in alta stagione</span>
+</div>
+</div>
+</div>
+ <h3>Stabilimenti e Spiaggia Libera</h3>
+<p>
+Lido Marini offre sia <strong>stabilimenti balneari</strong> con servizi completi (ombrelloni, lettini, bar, ristoranti) sia ampi tratti di <strong>spiaggia libera</strong>. Molti visitatori scelgono la spiaggia libera per posizionarsi all'ombra naturale della pineta, risparmiando sul noleggio dell'ombrellone.
+</p>
+ <div class="highlight-box">
+<h3>Suggerimento Locale</h3>
+<p>
+Portate un telo mare o una stuoia e posizionatevi al confine tra spiaggia e pineta: potrete godere dell'ombra naturale dei pini durante le ore centrali e spostarvi al sole quando desiderate. Molti locali preparano pranzi al sacco da consumare nella pineta con vista mare!
+</p>
+</div>
+</div>
+ <div class="content-section">
+<h2>Perfetta per Famiglie</h2>
+<p>
+Lido Marini è una delle destinazioni più apprezzate dalle <strong>famiglie con bambini</strong> per diversi motivi pratici e di sicurezza.
+</p>
+ <h3>Vantaggi per le Famiglie</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Sicurezza in Acqua</strong><br>
+<span style="color: #555;">Fondali bassi, mare calmo, visibilità perfetta</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Ombra Gratuita</strong><br>
+<span style="color: #555;">Pineta come alternativa agli ombrelloni</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Spazio per Giocare</strong><br>
+<span style="color: #555;">Pineta e spiaggia ampie per correre</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Atmosfera Tranquilla</strong><br>
+<span style="color: #555;">Meno caos rispetto ad altre località</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Picnic e Pranzi</strong><br>
+<span style="color: #555;">Tavoli e panchine nella pineta</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Piste Ciclabili</strong><br>
+<span style="color: #555;">Sicure per bici e passeggini</span>
+</div>
+</div>
+</div>
+ <p>
+La tranquillità di Lido Marini permette ai genitori di rilassarsi mentre i bambini giocano in sicurezza. Molte famiglie scelgono questa località proprio per l'atmosfera meno frenetica e più autentica rispetto alle spiagge più turistiche.
+</p>
+</div>
+ <div class="content-section">
+<h2>Attività e Sport</h2>
+<p>
+Lido Marini offre diverse attività sportive e ricreative, soprattutto legate alla natura e all'ambiente costiero.
+</p>
+ <h3>Sport e Attività All'Aperto</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Ciclismo</strong><br>
+<span style="color: #555;">Piste ciclabili lungo la costa</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Running e Jogging</strong><br>
+<span style="color: #555;">Percorsi nella pineta e sul lungomare</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Yoga e Pilates</strong><br>
+<span style="color: #555;">Lezioni all'aperto nella pineta</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Beach Volley</strong><br>
+<span style="color: #555;">Campi sulla spiaggia</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Kayak e SUP</strong><br>
+<span style="color: #555;">Noleggio attrezzature</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Snorkeling</strong><br>
+<span style="color: #555;">Esplorare i fondali</span>
+</div>
+</div>
+</div>
+ <h3>Pet Friendly</h3>
+<p>
+Alcune zone di Lido Marini sono <strong>dog-friendly</strong>, permettendo ai proprietari di cani di portare i loro amici a quattro zampe in spiaggia e nella pineta. Verificare le aree specifiche dedicate agli animali domestici.
+</p>
+</div>
+ <div class="content-section">
+<h2>Gastronomia</h2>
+<p>
+Lido Marini offre diversi ristoranti, trattorie e pizzerie dove gustare la cucina tipica salentina e piatti di pesce fresco.
+</p>
+ <h3>Dove Mangiare</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Ristoranti di Pesce</strong><br>
+<span style="color: #555;">Pescato fresco del giorno</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Pizzerie</strong><br>
+<span style="color: #555;">Pizza napoletana e focacce</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Trattorie Tipiche</strong><br>
+<span style="color: #555;">Cucina casalinga salentina</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Gelaterie</strong><br>
+<span style="color: #555;">Gelato artigianale</span>
+</div>
+</div>
+</div>
+ <p>
+Molti lidi hanno ristoranti interni con tavoli vista mare, mentre nel piccolo centro abitato si trovano locali familiari dove assaporare piatti autentici a prezzi contenuti.
+</p>
+</div>
+ <div class="content-section">
+<h2>Cosa Vedere nei Dintorni</h2>
+<p>
+Lido Marini è un'ottima base per esplorare le bellezze del basso Salento.
+</p>
+ <h3>Le Spiagge Vicine</h3>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-icon"></div>
+<h4><a href="/torre-pali" style="text-decoration: none; color: inherit;">Torre Pali</a></h4>
+<p>Isola della Fanciulla, Bandiera Blu, molo per tuffi. A 6 km da Lido Marini.</p>
+<a href="/torre-pali" style="color: #38a169; font-weight: 600;">Scopri Torre Pali</a>
+</div>
+<div class="info-card">
+<div class="info-card-icon"></div>
+<h4><a href="/pescoluse" style="text-decoration: none; color: inherit;">Pescoluse</a></h4>
+<p>Maldive del Salento, sabbia bianchissima. A 8 km da Lido Marini.</p>
+<a href="/pescoluse" style="color: #38a169; font-weight: 600;">Scopri Pescoluse</a>
+</div>
+<div class="info-card">
+<div class="info-card-icon"></div>
+<h4><a href="/torre-vado" style="text-decoration: none; color: inherit;">Torre Vado</a></h4>
+<p>Piscina naturale e porto turistico. A 9 km da Lido Marini.</p>
+<a href="/torre-vado" style="color: #38a169; font-weight: 600;">Scopri Torre Vado</a>
+</div>
+</div>
+ <p style="text-align: center; margin-top: 30px;">
+<a href="/spiagge-salento" style="display: inline-block; background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);"> Vedi Tutte le Spiagge del Salento</a>
+</p>
+ <h3>Località Vicine</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Ugento (5 km)</strong><br>
+<span style="color: #555;">Città messapica, castello, cattedrale, museo</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Torre Pali (6 km)</strong><br>
+<span style="color: #555;">Isola della Fanciulla, Bandiera Blu</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Pescoluse (8 km)</strong><br>
+<span style="color: #555;">Maldive del Salento</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Santa Maria di Leuca (20 km)</strong><br>
+<span style="color: #555;">Faro, basilica, grotte marine</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Specchia (25 km)</strong><br>
+<span style="color: #555;">Borgo più bello d'Italia</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Gallipoli (25 km)</strong><br>
+<span style="color: #555;">Città vecchia, movida, spiagge</span>
+</div>
+</div>
+</div>
+ <h3>Ugento: Città Storica</h3>
+<p>
+A soli 5 km nell'entroterra si trova <strong>Ugento</strong>, antica città messapica con un ricco patrimonio storico e archeologico. Da visitare: la <strong>Cattedrale</strong>, il <strong>Castello</strong>, il <strong>Museo Archeologico</strong> con reperti messapici e romani, e il centro storico con vicoletti caratteristici.
+</p>
+</div>
+ <div class="content-section">
+<h2>Come Arrivare e Servizi</h2>
+ <h3>In Auto</h3>
+<p>
+<strong>Da Lecce:</strong> SS101 verso Gallipoli, poi SP215 verso Ugento e seguire indicazioni Lido Marini (50 km, 45 minuti)<br>
+<strong>Da Gallipoli:</strong> SP215 verso Ugento, poi Lido Marini (20 km, 25 minuti)<br>
+<strong>Da Torre Pali/Pescoluse:</strong> SP358 direzione nord (6-8 km, 10 minuti)
+</p>
+ <h3>Parcheggi</h3>
+<p>
+Parcheggi gratuiti e a pagamento disponibili lungo la strada costiera e nelle vicinanze della pineta. In alta stagione consigliato arrivare presto la mattina.
+</p>
+ <h3>Servizi</h3>
+<div class="features-list">
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Minimarket</strong><br>
+<span style="color: #555;">Generi alimentari e prima necessità</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Farmacia</strong><br>
+<span style="color: #555;">A Ugento (5 km)</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Bancomat</strong><br>
+<span style="color: #555;">A Ugento</span>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-item-icon"></div>
+<div>
+<strong>Distributore</strong><br>
+<span style="color: #555;">Sulla strada per Ugento</span>
+</div>
+</div>
+</div>
+</div>
+ <div class="cta-section">
+<h2>Rilassati a Lido Marini</h2>
+<p>Prenota la tua vacanza tra pineta e mare cristallino</p>
+<a href="https://torrepalivacanze.it" class="btn"><span>Vedi Appartamenti</span></a>
+<a href="/contatti" class="btn"><span>Contattaci</span></a>
+</div>
+</div>
+ <!-- Footer -->
+<SiteFooter guideHref="/spiagge-salento" placeHtml="Torre Pali, Lecce (LE)<br />Salento, Puglia" />
+ <!-- Schema.org TouristAttraction -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TouristAttraction",
+ "name": "Lido Marini - Pineta e Tranquillità",
+ "description": "Lido Marini è una spiaggia tranquilla circondata da una splendida pineta mediterranea che offre ombra naturale e un'atmosfera rilassante. Ideale per chi cerca tranquillità e vuole alternare mare e passeggiate nella natura.",
+ "image": [
+ "https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg",
+ "https://spiaggedelsalento.it/img/torre-pali/spiaggia1.jpg",
+ "https://spiaggedelsalento.it/img/torre-pali/mare1.jpg"
+ ],
+ "geo": {
+ "@type": "GeoCoordinates",
+ "latitude": "39.8682",
+ "longitude": "18.0962"
+ },
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Ugento",
+ "addressRegion": "Puglia",
+ "postalCode": "73059",
+ "addressCountry": "IT"
+ },
+ "touristType": [
+ "Famiglie",
+ "Coppie",
+ "Amanti della natura",
+ "Pet lovers"
+ ],
+ "availableLanguage": ["it", "en"],
+ "isAccessibleForFree": true,
+ "publicAccess": true
+}
+</script>
+ <!-- Schema.org BreadcrumbList -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ {
+ "@type": "ListItem",
+ "position": 1,
+ "name": "Home",
+ "item": "https://spiaggedelsalento.it/"
+ },
+ {
+ "@type": "ListItem",
+ "position": 2,
+ "name": "Spiagge Salento",
+ "item": "https://spiaggedelsalento.it/spiagge-salento.html"
+ },
+ {
+ "@type": "ListItem",
+ "position": 3,
+ "name": "Lido Marini",
+ "item": "https://spiaggedelsalento.it/lido-marini.html"
+ }
+ ]
+}
+</script>
+ <!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0TEME57K0"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-M0TEME57K0');
+</script>
+ <script>
+(function () {
+ const rules = [
+ { regex: /(torre vado)/i, icon: '\\u{1F4CD}' },
+ { regex: /(santa maria di leuca|\bleuca\b)/i, icon: '\\u{2728}' },
+ { regex: /(pesce fresco|frutti di mare|pesce)/i, icon: '\\u{1F41F}' },
+ { regex: /(animazion|intratteniment|spettacol)/i, icon: '\\u{1F389}' },
+ { regex: /(ciclism|ciclab|biciclett|bike|mtb)/i, icon: '\\u{1F6B4}' },
+ { regex: /(farmacia)/i, icon: '\\u{2695}\\u{FE0F}' },
+ { regex: /(gelater|gelat)/i, icon: '\\u{1F366}' },
+ { regex: /(pasticcer|dolci|dessert)/i, icon: '\\u{2728}' },
+ { regex: /(pizzer|pizza)/i, icon: '\\u{1F355}' },
+ { regex: /(trattori|osteri)/i, icon: '\\u{2728}' },
+ { regex: /(lido|stabiliment)/i, icon: '\\u{2728}' },
+ { regex: /(bancomat|atm)/i, icon: '\\u{2728}' },
+ { regex: /(wi-?fi|internet)/i, icon: '\\u{2728}' },
+ { regex: /(supermercat|minimarket|market)/i, icon: '\\u{2728}' },
+ { regex: /(parchegg|auto|navetta)/i, icon: '\\u{2728}' },
+ { regex: /(docc|toilette|spogliatoi|servizi igienici)/i, icon: '\\u{2728}' },
+ { regex: /(bar|ristor|aperitiv|pranz|cena|gastronom|picnic)/i, icon: '\\u{2728}' },
+ { regex: /(pini|pineta|ombra|macchia mediterranea|flora|natura)/i, icon: '\\u{2728}' },
+ { regex: /(sport|kayak|sup|windsurf|surf|acquagym|nuoto)/i, icon: '\\u{2728}' },
+ { regex: /(sentier|passegg|cammin|trek|jogging)/i, icon: '\\u{2728}' },
+ { regex: /(ombrellon|lettin)/i, icon: '\\u{2728}' },
+ { regex: /(foto|fotograf|drone|panorama|scatt)/i, icon: '\\u{2728}' },
+ { regex: /(tramont|alba|sunset)/i, icon: '\\u{2728}' },
+ { regex: /(famigl|bambin|family)/i, icon: '\\u{2728}' },
+ { regex: /(spiaggia|sabbia)/i, icon: '\\u{2728}' },
+ { regex: /(acqua|mare|onda|cristallin|turches|blu|azzurr)/i, icon: '\\u{2728}' },
+ { regex: /(relax|calm|tranquill)/i, icon: '\\u{2728}' }
+ ];
+ const infoRules = [
+ { regex: /(torre vado)/i, icon: '\\u{1F4CD}' },
+ { regex: /(santa maria di leuca|\bleuca\b)/i, icon: '\\u{2728}' },
+ { regex: /(pini|pineta|natura|ombra|flora)/i, icon: '\\u{2728}' },
+ { regex: /(acqua|mare|onda|cristallin|turches|blu|azzurr)/i, icon: '\\u{2728}' },
+ { regex: /(spiaggia|sabbia)/i, icon: '\\u{2728}' },
+ { regex: /(famigl|bambin|family)/i, icon: '\\u{2728}' },
+ { regex: /(relax|calm|tranquill)/i, icon: '\\u{2728}' },
+ { regex: /(foto|fotograf|drone|panorama|scatt)/i, icon: '\\u{2728}' }
+ ];
+ document.querySelectorAll('.features-list .feature-item').forEach((item) => {
+ const iconEl = item.querySelector('.feature-item-icon');
+ if (!iconEl) return;
+ const text = (item.textContent || '').toLowerCase();
+ const match = rules.find((rule) => rule.regex.test(text));
+ const icon = match ? match.icon : '\\u{2705}';
+ iconEl.style.setProperty('--feature-icon', `'${icon}'`);
+ });
+ document.querySelectorAll('.info-grid .info-card').forEach((card) => {
+ const iconEl = card.querySelector('.info-card-icon');
+ if (!iconEl) return;
+ const text = (card.textContent || '').toLowerCase();
+ const match = infoRules.find((rule) => rule.regex.test(text));
+ const icon = match ? match.icon : '\\u{2705}';
+ iconEl.style.setProperty('--info-icon', `'${icon}'`);
+ });
+})();
+</script>
+ </BaseLayout>
+ 
+
+
+
+

@@ -1,0 +1,358 @@
+﻿---
+import SiteNav from '../components/SiteNav.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+ <BaseLayout>
+<Fragment slot="head">
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="language" content="Italian">
+<meta name="author" content="Affitti Torre Pali">
+<link rel="canonical" href="https://spiaggedelsalento.it/contatti">
+<title>Contattaci | Affitti Torre Pali Salento</title>
+<meta name="description" content="Contattaci per informazioni su case vacanze a Torre Pali. Rispondiamo entro 1 ora. WhatsApp, telefono e form di contatto.">
+<meta name="keywords" content="contatti torre pali, affitti salento contatti, prenotazioni torre pali, whatsapp case vacanze, telefono affitti salento, informazioni case vacanze torre pali, prenota casa salento, disponibilità appartamenti, risposta rapida, proprietari sul posto, assistenza 24/7, form contatto vacanze">
+<!-- Favicon e Logo -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="shortcut icon" href="https://spiaggedelsalento.it/img/logo.png">
+<link rel="manifest" href="/manifest.json">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #2c3e50; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding-top: 70px; }
+@keyframes pulse {
+ 0% { box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
+ 50% { box-shadow: 0 4px 15px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.2); }
+ 100% { box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
+}
+/* Tooltip per pulsanti */
+[data-tooltip] { position: relative; }
+[data-tooltip]::before {
+ content: attr(data-tooltip);
+ position: absolute;
+ bottom: 120%;
+ left: 50%;
+ transform: translateX(-50%) translateY(10px);
+ background: rgba(0,0,0,0.9);
+ color: white;
+ padding: 8px 12px;
+ border-radius: 8px;
+ font-size: 13px;
+ white-space: nowrap;
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.3s ease;
+ z-index: 1000;
+}
+[data-tooltip]::after {
+ content: '';
+ position: absolute;
+ bottom: 100%;
+ left: 50%;
+ transform: translateX(-50%) translateY(10px);
+ border: 6px solid transparent;
+ border-top-color: rgba(0,0,0,0.9);
+ opacity: 0;
+ pointer-events: none;
+ transition: all 0.3s ease;
+}
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+ opacity: 1;
+ transform: translateX(-50%) translateY(0);
+}
+.footer { background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%); color: white; padding: 50px 20px 20px; margin-top: 60px; border-top: 3px solid transparent; border-image: linear-gradient(90deg, #0ea5e9, #0284c7, #38bdf8) 1; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.footer-section h3 { margin-bottom: 20px; color: #ecf0f1; font-weight: 600; font-size: 1.2em; }
+.footer-section p, .footer-section a { color: #bdc3c7; font-size: 0.95em; line-height: 1.8; text-decoration: none; display: block; margin-bottom: 10px; transition: all 0.3s; }
+.footer-section a:hover { color: #38bdf8; transform: translateX(5px); }
+.footer-bottom { text-align: center; margin-top: 40px; padding-top: 25px; border-top: 1px solid #4a5568; color: #a0aec0; font-size: 0.9em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 30px; }
+header { text-align: center; margin-bottom: 50px; padding: 60px 20px; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 30px; box-shadow: 0 20px 60px rgba(14, 165, 233, 0.3); animation: fadeIn 0.8s ease-out; }
+header h1 { font-size: 3em; margin-bottom: 15px; font-weight: 700; text-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.back-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; margin-bottom: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transition: all 0.3s; }
+.back-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5); }
+.content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.contact-info, .contact-form { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 45px; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.08); border: 1px solid rgba(14, 165, 233, 0.1); animation: fadeInUp 0.6s ease-out; }
+.contact-info h2, .contact-form h2 { font-size: 1.8em; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 25px; font-weight: 700; }
+.contact-method { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(14, 165, 233, 0.1); }
+.contact-method:last-child { border-bottom: none; }
+.contact-method h3 { color: #0ea5e9; margin-bottom: 10px; font-size: 1.2em; font-weight: 600; }
+.contact-method p { color: #4a5568; font-size: 1.1em; margin-bottom: 10px; }
+.contact-method a { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 10px; transition: all 0.3s; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); position: relative; overflow: hidden; }
+.contact-method a::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%); opacity: 0; transition: opacity 0.3s; }
+.contact-method a:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5); }
+.contact-method a:hover::before { opacity: 1; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50; }
+.form-group input, .form-group textarea { width: 100%; padding: 14px; border: 2px solid rgba(14, 165, 233, 0.2); border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 1em; transition: all 0.3s; background: rgba(14, 165, 233, 0.02); }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #0ea5e9; background: white; box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1); }
+.form-group textarea { resize: vertical; min-height: 150px; }
+.form-btn { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 16px 40px; border: none; border-radius: 50px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: all 0.3s; width: 100%; box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3); position: relative; overflow: hidden; }
+.form-btn::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%); opacity: 0; transition: opacity 0.3s; }
+.form-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(14, 165, 233, 0.5); }
+.form-btn:hover::before { opacity: 1; }
+.success-message { display: none; background: linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(56, 161, 105, 0.1) 100%); color: #38a169; padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 2px solid #48bb78; font-weight: 500; }
+@media (max-width: 768px) {
+ .container { padding: 15px; }
+ header h1 { font-size: 1.8em; }
+ .content-grid { grid-template-columns: 1fr; }
+ .footer-container { grid-template-columns: 1fr; }
+}
+</style>
+ </Fragment>
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FP79B56"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Navbar -->
+<SiteNav guideHref="/spiagge-salento" />
+ <div class="container">
+<a href="/" class="back-btn">Torna alla homepage</a>
+ <header>
+<h1>Contattaci</h1>
+<p style="font-size: 1.1em; margin-top: 15px;">Siamo qui per rispondere a tutte le tue domande su case vacanze a Torre Pali</p>
+</header>
+ <div class="content-grid">
+<div class="contact-info">
+<h2>Metodi di Contatto</h2>
+ <div class="contact-method">
+<h3>WhatsApp</h3>
+<p>Risposta rapida (entro 10 minuti)</p>
+<a href="https://wa.me/393804580135?text=Ciao!%20Vorrei%20informazioni%20sulle%20vostre%20case%20vacanza%20a%20Torre%20Pali" onclick="gtag('event', 'whatsapp_click', {'event_category': 'Contact', 'event_label': 'Contatti - Contact Method'});">Scrivi su WhatsApp</a>
+</div>
+ <div class="contact-method">
+<h3>Telefono</h3>
+<p>Disponibile 09:00 - 20:00</p>
+<a href="tel:+393804580135">+39 380 458 01 35</a>
+</div>
+ <div class="contact-method">
+<h3>Email</h3>
+<p>Rispondiamo entro 1 ora</p>
+<p><strong>info@spiaggedelsalento.it</strong></p>
+</div>
+ <div class="contact-method">
+<h3>Ubicazione</h3>
+<p>Torre Pali, Lecce (LE)<br>Salento, Puglia</p>
+</div>
+</div>
+ <div class="contact-form">
+<h2>Invia un Messaggio</h2>
+ <div class="success-message" id="successMsg"> Messaggio inviato con successo! Ti contatteremo presto.</div>
+<form id="contactForm" action="https://formspree.io/f/mvzrrpdr" method="POST">
+ <!-- Honeypot anti-spam (nascosto) -->
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+ <div class="form-group">
+<label for="nome">Nome *</label>
+<input type="text" id="nome" name="nome" required>
+</div>
+ <div class="form-group">
+<label for="email">Email *</label>
+<input type="email" id="email" name="email" required>
+</div>
+ <div class="form-group">
+<label for="telefono">Telefono</label>
+<input type="tel" id="telefono" name="telefono">
+</div>
+ <div class="form-group">
+<label for="messaggio">Messaggio *</label>
+<textarea id="messaggio" name="messaggio" required placeholder="Raccontaci cosa ti interessa..."></textarea>
+</div>
+ <div class="form-group" style="margin-top: 25px;">
+<label style="display: flex; align-items: flex-start; font-weight: normal; cursor: pointer;">
+<input type="checkbox" id="privacy" name="privacy" required style="margin-right: 10px; margin-top: 4px; width: 18px; height: 18px;">
+<span style="font-size: 0.95em; color: #555;">
+Accetto l'<a href="/privacy" target="_blank" style="color: #e74c3c; text-decoration: underline; cursor: pointer;" onclick="event.stopPropagation();">informativa sulla privacy</a> e autorizzo il trattamento dei miei dati personali per rispondere alla richiesta *
+</span>
+</label>
+</div>
+ <div style="font-size: 0.85em; color: #7f8c8d; margin-top: 15px; padding: 12px; background: #f8f9fa; border-radius: 8px;">
+<strong>Privacy:</strong> I tuoi dati verranno utilizzati solo per rispondere alla tua richiesta. Non li condivideremo con terzi né li useremo per marketing. Puoi richiedere l'eliminazione in qualsiasi momento a <strong>info@spiaggedelsalento.it</strong>.
+</div>
+ <button type="submit" class="form-btn">Invia Messaggio</button>
+</form>
+</div>
+</div>
+ <div style="text-align: center; padding: 40px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+<h2 style="color: #2c3e50; margin-bottom: 20px;">Tempo di Risposta</h2>
+<p style="font-size: 1.1em; color: #555; margin-bottom: 20px;">
+ <strong>WhatsApp:</strong> 10 minuti<br>
+ <strong>Telefono:</strong> Risposta immediata<br>
+ <strong>Email/Form:</strong> Entro 1 ora
+</p>
+<p style="color: #7f8c8d;">Siamo disponibili 7 giorni su 7, dalle 09:00 alle 20:00</p>
+</div>
+</div>
+ <!-- Structured Data: Organization con Logo -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Spiagge del Salento",
+ "alternateName": "Affitti Torre Pali Salento",
+ "url": "https://spiaggedelsalento.it",
+ "logo": "https://spiaggedelsalento.it/img/logo.png",
+ "image": "https://spiaggedelsalento.it/img/logo.png",
+ "description": "Portale dedicato al Spiagge del Salento: scopri spiagge, eventi, attività e appartamenti in affitto nelle località più belle della costa ionica salentina.",
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "Torre Pali",
+ "addressLocality": "Salve",
+ "addressRegion": "Puglia",
+ "postalCode": "73050",
+ "addressCountry": "IT"
+ },
+ "contactPoint": {
+ "@type": "ContactPoint",
+ "telephone": "+39-380-458-01-35",
+ "contactType": "Customer Service",
+ "availableLanguage": ["Italian"],
+ "areaServed": "IT"
+ },
+ "sameAs": [
+ "https://www.facebook.com/spiaggedelsalento",
+ "https://www.instagram.com/spiaggedelsalento"
+ ]
+}
+</script>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0TEME57K0"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-M0TEME57K0');
+</script>
+<script>
+// AJAX submission to Formspree to avoid redirect
+document.addEventListener('DOMContentLoaded', function(){
+ const form = document.getElementById('contactForm');
+ const success = document.getElementById('successMsg');
+ if (!form) return;
+ form.addEventListener('submit', async (e) => {
+ e.preventDefault();
+ const data = new FormData(form);
+ // Add reply-to so Formspree can send an autoresponse to the user
+ const userEmail = (form.elements['email'] && form.elements['email'].value) || '';
+ const userName = (form.elements['nome'] && form.elements['nome'].value) || 'Cliente';
+ if (userEmail) {
+ data.append('_replyto', userEmail);
+ data.append('_email', userEmail); // Campo aggiuntivo per migliore deliverability
+ }
+ // Subject ottimizzato per evitare spam
+ data.append('_subject', `Nuova Richiesta da ${userName} - Affitti Torre Pali`);
+ // Template HTML per email più professionale
+ data.append('_template', 'box');
+ // Conferma automatica all'utente
+ data.append('_autoresponse', 'Grazie per averci contattato! Abbiamo ricevuto la tua richiesta e ti risponderemo entro 1 ora. - Affitti Torre Pali');
+ try {
+ const resp = await fetch(form.action, {
+ method: 'POST',
+ headers: { 'Accept': 'application/json' },
+ body: data
+ });
+ if (resp.ok) {
+ success.style.display = 'block';
+ success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ form.reset();
+ setTimeout(() => { success.style.display = 'none'; }, 7000);
+ } else {
+ const text = await resp.text();
+ console.error('Formspree error', resp.status, text);
+ alert('Si è verificato un errore durante l\'invio. Riprova più tardi.');
+ }
+ } catch (err) {
+ console.error(err);
+ alert('Errore di rete. Riprova più tardi.');
+ }
+ });
+});
+</script>
+ <!-- Footer -->
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-section">
+<h3>Spiagge del Salento</h3>
+<p>Portale dedicato al Spiagge del Salento: scopri spiagge, eventi, attività e appartamenti in affitto nelle località più belle della costa ionica salentina.</p>
+<p style="margin-top: 15px;"> Spiagge del Salento<br>Lecce, Puglia</p>
+</div>
+<div class="footer-section">
+<h3>Link Utili</h3>
+<a href="/">Home</a>
+<a href="https://torrepalivacanze.it/">I Nostri Appartamenti</a>
+<a href="/spiagge-salento">Guida Spiagge</a>
+<a href="/pescoluse">Pescoluse</a>
+<a href="/torre-pali">Torre Pali</a>
+<a href="/lido-marini">Lido Marini</a>
+<a href="/torre-vado">Torre Vado</a>
+<a href="/eventi-salento">Eventi e Tradizioni</a>
+<a href="/contatti">Contatti</a>
+<a href="/privacy">Privacy Policy</a>
+</div>
+<div class="footer-section">
+<h3>Contatti</h3>
+<p> <a href="tel:+393804580135">+39 380 458 01 35</a></p>
+<p> <strong>info@spiaggedelsalento.it</strong></p>
+<p> <a href="https://wa.me/393804580135?text=Ciao!%20Vorrei%20informazioni%20sulle%20vostre%20case%20vacanza%20a%20Torre%20Pali" target="_blank" onclick="gtag('event', 'whatsapp_click', {'event_category': 'Contact', 'event_label': 'Contatti - Footer'});">WhatsApp</a></p>
+<p style="margin-top: 15px;">Orario: 09:00 - 20:00<br>Risposta entro 1 ora</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Spiagge del Salento. Tutti i diritti riservati.</p>
+</div>
+</footer>
+ <!-- Dati Strutturati Pagina Contatti -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ContactPage",
+ "mainEntity": {
+ "@type": "Organization",
+ "name": "Spiagge del Salento",
+ "url": "https://spiaggedelsalento.it",
+ "logo": "https://spiaggedelsalento.it/img/logo.png",
+ "contactPoint": {
+ "@type": "ContactPoint",
+ "telephone": "+39-380-458-01-35",
+ "contactType": "customer service",
+ "availableLanguage": ["Italian"],
+ "hoursAvailable": {
+ "@type": "OpeningHoursSpecification",
+ "opens": "09:00",
+ "closes": "20:00"
+ },
+ "areaServed": "IT"
+ },
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Torre Pali",
+ "addressRegion": "Puglia",
+ "addressCountry": "IT"
+ },
+ "email": "info@spiaggedelsalento.it",
+ "sameAs": [
+ "https://wa.me/393804580135"
+ ]
+ }
+}
+</script>
+ </BaseLayout>
+ 
+
+

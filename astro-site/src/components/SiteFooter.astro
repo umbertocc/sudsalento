@@ -1,0 +1,55 @@
+---
+const { guideHref = '/spiagge-salento', place = 'Lecce, Puglia', placeHtml } = Astro.props;
+---
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>🏖️ Spiagge del Salento</h3>
+      <p>Portale dedicato al Spiagge del Salento: scopri spiagge, eventi, attività e appartamenti in affitto nelle località più belle della costa ionica salentina.</p>
+      <p style="margin-top: 15px;">📍 Spiagge del Salento<br />{placeHtml ? <span set:html={placeHtml} /> : place}</p>
+    </div>
+    <div class="footer-section">
+      <h3>🔗 Link Utili</h3>
+      <a href="/">Home</a>
+      <a href="https://torrepalivacanze.it/">I Nostri Appartamenti</a>
+      <a href={guideHref}>Guida Spiagge</a>
+      <a href="/pescoluse">Pescoluse</a>
+      <a href="/torre-pali">Torre Pali</a>
+      <a href="/lido-marini">Lido Marini</a>
+      <a href="/torre-vado">Torre Vado</a>
+      <a href="/eventi-salento">Eventi e Tradizioni</a>
+      <a href="/contatti">Contatti</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <div class="footer-section">
+      <h3>Contatti</h3>
+      <p>📞 <a href="tel:+393804580135">+39 380 458 01 35</a></p>
+      <p>📧 <strong>info@spiaggedelsalento.it</strong></p>
+      <p>💬 <a href="https://wa.me/393804580135?text=Ciao!%20Vorrei%20informazioni%20sul%20Sud%20Salento%20e%20sugli%20appartamenti%20disponibili" target="_blank">WhatsApp</a></p>
+      <p style="margin-top: 15px;">Orario: 09:00 - 20:00<br />Risposta entro 1 ora</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Spiagge del Salento. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<style>
+.footer { background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); color: white; padding: 50px 30px 25px; margin-top: 60px; position: relative; }
+.footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0ea5e9 0%, #0284c7 50%, #38bdf8 100%); }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+.footer-section h3 { margin-bottom: 20px; color: #f7fafc; font-weight: 700; font-size: 1.2em; }
+.footer-section p { color: #cbd5e0; font-size: 0.95em; line-height: 1.8; margin-bottom: 10px; }
+.footer-section a { color: #cbd5e0; font-size: 0.95em; line-height: 1.8; text-decoration: none; display: block; margin-bottom: 8px; transition: all 0.25s ease; }
+.footer-section a:hover { color: #38bdf8; transform: translateX(4px); }
+.footer-bottom { text-align: center; margin-top: 34px; padding-top: 20px; border-top: 1px solid #4a5568; color: #a0aec0; font-size: 0.9em; }
+
+@media (max-width: 900px) {
+  .footer-container { gap: 28px; }
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 40px 20px 20px; }
+  .footer-container { grid-template-columns: 1fr; gap: 24px; }
+}
+</style>

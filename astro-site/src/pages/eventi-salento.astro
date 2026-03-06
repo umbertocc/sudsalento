@@ -1,0 +1,475 @@
+﻿---
+import SiteNav from '../components/SiteNav.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+ <BaseLayout>
+<Fragment slot="head">
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventi e Tradizioni nel Salento - Pizzica, Sagre e Feste | Spiagge del Salento</title>
+<meta name="description" content="Scopri gli eventi imperdibili del Salento: Pizzica Salentina, Notte della Taranta, sagre tradizionali, Notte Bianca, San Lorenzo e le feste patronali dei borghi.">
+<link rel="canonical" href="https://spiaggedelsalento.it/eventi-salento">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0TEME57K0"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-M0TEME57K0');
+</script>
+ <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #2c3e50; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding-top: 70px; }
+@keyframes pulse {
+ 0% { box-shadow: 0 6px 25px rgba(37,211,102,0.4); }
+ 50% { box-shadow: 0 6px 25px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.2); }
+ 100% { box-shadow: 0 6px 25px rgba(37,211,102,0.4); }
+}
+.footer { background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%); color: white; padding: 50px 20px 20px; margin-top: 60px; border-top: 3px solid transparent; border-image: linear-gradient(90deg, #0ea5e9, #0284c7, #38bdf8) 1; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.footer-section h3 { margin-bottom: 20px; color: #ecf0f1; font-weight: 600; font-size: 1.2em; }
+.footer-section p, .footer-section a { color: #bdc3c7; font-size: 0.95em; line-height: 1.8; text-decoration: none; display: block; margin-bottom: 10px; transition: all 0.3s; }
+.footer-section a:hover { color: #38bdf8; transform: translateX(5px); }
+.footer-bottom { text-align: center; margin-top: 40px; padding-top: 25px; border-top: 1px solid #4a5568; color: #a0aec0; font-size: 0.9em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 30px; }
+.back-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; margin-bottom: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transition: all 0.3s; }
+.back-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5); }
+header { text-align: center; margin-bottom: 50px; padding: 80px 20px; background: linear-gradient(135deg, #38bdf8 0%, #f5576c 100%); color: white; border-radius: 30px; box-shadow: 0 20px 60px rgba(56, 189, 248, 0.3); animation: fadeIn 0.8s ease-out; }
+header h1 { font-size: 3.5em; margin-bottom: 15px; font-weight: 700; text-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.subtitle { font-size: 1.4em; color: rgba(255, 255, 255, 0.95); font-weight: 400; }
+.content-section { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 50px 40px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); margin-bottom: 40px; border: 1px solid rgba(56, 189, 248, 0.1); animation: fadeInUp 0.6s ease-out; }
+.content-section h2 { font-size: 2.5em; background: linear-gradient(135deg, #38bdf8 0%, #f5576c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 25px; border-left: 5px solid transparent; border-image: linear-gradient(135deg, #38bdf8, #f5576c) 1; padding-left: 20px; font-weight: 700; }
+.content-section h3 { font-size: 1.8em; color: #38bdf8; margin: 35px 0 20px 0; font-weight: 600; }
+.content-section p { font-size: 1.15em; line-height: 1.8; color: #4a5568; margin-bottom: 20px; text-align: justify; }
+.event-card { background: linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, rgba(245, 87, 108, 0.05) 100%); border-left: 5px solid #38bdf8; padding: 30px; border-radius: 20px; margin: 25px 0; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1); transition: all 0.4s; }
+.event-card:hover { transform: translateX(8px); box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2); background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%); }
+.event-card h4 { font-size: 1.6em; color: #f5576c; margin-bottom: 15px; font-weight: 600; }
+.event-card .event-date { display: inline-block; background: linear-gradient(135deg, #38bdf8 0%, #f5576c 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9em; font-weight: 600; margin-bottom: 15px; }
+.event-card .event-location { color: #0ea5e9; font-weight: 500; margin-bottom: 10px; }
+.event-card .event-location::before { content: '🧭 '; }
+.highlight-box { background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%); border-left: 5px solid #fbbf24; padding: 30px; border-radius: 20px; margin: 30px 0; box-shadow: 0 4px 15px rgba(251, 191, 36, 0.1); }
+.highlight-box h3 { color: #f59e0b; margin-top: 0; font-weight: 600; }
+.info-box { background: linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(56, 161, 105, 0.1) 100%); border-left: 5px solid #48bb78; padding: 25px; border-radius: 15px; margin: 20px 0; }
+.info-box strong { color: #48bb78; }
+.timeline { position: relative; padding: 20px 0; }
+.timeline::before { content: ''; position: absolute; left: 50px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, #38bdf8 0%, #f5576c 100%); }
+.timeline-item { position: relative; padding-left: 90px; margin-bottom: 40px; }
+.timeline-marker { position: absolute; left: 38px; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #38bdf8 0%, #f5576c 100%); border: 4px solid white; box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3); z-index: 1; }
+.month-badge { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 8px 20px; border-radius: 25px; font-weight: 600; font-size: 1.1em; margin-bottom: 15px; }
+ @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+ @media (max-width: 768px) {
+ .container { padding: 15px; }
+ header h1 { font-size: 2em; }
+ .subtitle { font-size: 1.1em; }
+ .content-section { padding: 30px 20px; }
+ .content-section h2 { font-size: 1.8em; }
+ .event-card { padding: 20px; }
+ .footer-container { grid-template-columns: 1fr; }
+ .timeline::before { left: 30px; }
+ .timeline-item { padding-left: 70px; }
+ .timeline-marker { left: 18px; }
+}
+</style>
+ </Fragment>
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FP79B56"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ <!-- Navbar -->
+<SiteNav guideHref="/spiagge-salento" />
+ <div class="container">
+<a href="/" class="back-btn">← Torna alla homepage</a>
+ <header>
+<h1>🎉 Eventi e Tradizioni del Salento</h1>
+<p class="subtitle">Pizzica, Sagre, Feste e la Magia delle Notti Salentine</p>
+</header>
+ <div class="content-section">
+ <h2>🎵 La Pizzica Salentina</h2>
+ <p>La <strong>Pizzica</strong> è l'anima musicale del Salento, una danza popolare travolgente che affonda le radici nella tradizione contadina e nel rito della tarantola. Oggi è diventata il simbolo identitario della regione, ballata in piazze, sagre e concerti durante tutta l'estate.</p>
+ <div class="highlight-box">
+<h3>💃 Caratteristiche della Pizzica</h3>
+<p><strong>Ritmo:</strong> Veloce e coinvolgente, suonata con tamburello, organetto, violino e chitarra</p>
+<p><strong>Ballo:</strong> Di coppia o di gruppo, con movimenti rapidi e giri vorticosi</p>
+<p><strong>Origini:</strong> Legata al fenomeno del tarantismo, un rito di guarigione dalla puntura della taranta (ragno)</p>
+<p><strong>Tipi:</strong> Pizzica-pizzica (festa), Pizzica de core (corteggiamento), Pizzica-scherma (ballo di lotta)</p>
+</div>
+ <h3>🌙 La Notte della Taranta</h3>
+ <div class="event-card">
+<span class="event-date">🗓️ Agosto (finale ultima settimana)</span>
+<h4>Festival Internazionale della Pizzica</h4>
+<p class="event-location">Varie località del Salento + Concertone finale a Melpignano</p>
+<p>Il <strong>festival più importante d'Europa</strong> dedicato alla musica popolare salentina. Un tour itinerante che tocca diversi borghi del Salento per culminare nel <strong>Concertone finale</strong> a Melpignano, con oltre 150.000 spettatori.</p>
+<div class="info-box">
+<strong>💡 Consigli:</strong><br>
+• Prenotare alloggio con mesi di anticipo per il periodo del festival<br>
+• Seguire le tappe nei borghi prima del concertone (gratuite)<br>
+• Il concertone finale è gratuito ma arrivare presto per trovare posto<br>
+• Preparatevi a ballare fino all'alba!
+</div>
+</div>
+ <h3>🎧 Dove Ascoltare la Pizzica</h3>
+<ul style="margin-left: 25px; line-height: 2;">
+<li><strong>Piazze dei borghi:</strong> Concerti gratuiti in estate (Galatina, Martano, Carpignano)</li>
+<li><strong>Sagre e feste patronali:</strong> Ogni paese ha la sua festa con pizzica dal vivo</li>
+<li><strong>Ristoranti e masserie:</strong> Cene con musica dal vivo e balli tradizionali</li>
+<li><strong>Mercatini serali:</strong> Lecce, Gallipoli, Otranto - artisti di strada suonano pizzica</li>
+</ul>
+ </div>
+ <div class="content-section">
+ <h2>🍷 Le Sagre del Salento</h2>
+ <p>Le <strong>sagre</strong> sono il cuore pulsante della cultura gastronomica salentina. Ogni paese celebra i suoi prodotti tipici con feste popolari che durano intere notti, tra cibo tradizionale, vino locale, musica e balli.</p>
+ <h3>📅 Calendario delle Sagre Principali</h3>
+ <div class="timeline">
+ <div class="timeline-item">
+<div class="timeline-marker"></div>
+<span class="month-badge">Giugno</span>
+<div class="event-card">
+<h4>Sagra della Municeddha</h4>
+<p class="event-location">Cannole</p>
+<p>Degustazione delle <strong>lumache</strong> preparate in umido con aglio, olio, pomodoro e peperoncino. Un piatto povero della tradizione contadina.</p>
+</div>
+</div>
+ <div class="timeline-item">
+<div class="timeline-marker"></div>
+<span class="month-badge">Luglio</span>
+<div class="event-card">
+<h4>Sagra della Puccia</h4>
+<p class="event-location">Squinzano</p>
+<p>Il famoso <strong>panino salentino</strong> farcito con olive, pomodori, verdure e salumi. Stand gastronomici e concerti di pizzica.</p>
+</div>
+</div>
+ <div class="timeline-item">
+<div class="timeline-marker"></div>
+<span class="month-badge">Agosto</span>
+<div class="event-card">
+<h4>Sagra della Pittula</h4>
+<p class="event-location">Tuglie, Squinzano, Torre Paduli</p>
+<p>Le <strong>frittelle</strong> salentine lievitate, sia dolci che salate (con pomodoro, cavolfiore, acciughe). Calde e croccanti!</p>
+</div>
+ <div class="event-card" style="margin-top: 25px;">
+<h4>Sagra te lu Purpu</h4>
+<p class="event-location">Mola di Bari / Torre Suda</p>
+<p>Degustazione di <strong>polpo</strong> bollito, alla griglia, in insalata. Festa di mare con musica fino a tarda notte.</p>
+</div>
+</div>
+ <div class="timeline-item">
+<div class="timeline-marker"></div>
+<span class="month-badge">Settembre</span>
+<div class="event-card">
+<h4>Fiera di Santa Croce</h4>
+<p class="event-location">Torre Paduli (Ruffano)</p>
+<p>Una delle fiere più antiche del Sud Italia, con stand gastronomici, giostre e il famoso <strong>Festival della Taranta di Settembre</strong>.</p>
+</div>
+</div>
+ <div class="timeline-item">
+<div class="timeline-marker"></div>
+<span class="month-badge">Ottobre</span>
+<div class="event-card">
+<h4>Festa te lu Mieru (Sagra del Vino)</h4>
+<p class="event-location">Leverano, Copertino</p>
+<p>Celebrazione del <strong>vino novello</strong> con degustazioni gratuite, cantine aperte, musica e prodotti tipici.</p>
+</div>
+</div>
+ </div>
+ <div class="info-box">
+<strong>ℹ️ Info pratiche sulle sagre:</strong><br>
+• Ingresso sempre gratuito<br>
+• Cibo a prezzi popolari (3-8€ a porzione)<br>
+• Iniziano dopo le 19:00 e proseguono fino a notte fonda<br>
+• Portate contanti, non sempre accettano carte<br>
+• Arrivate presto per evitare code ai stand gastronomici
+</div>
+ </div>
+ <div class="content-section">
+ <h2>✨ La Notte Bianca del Salento</h2>
+ <p>Le <strong>Notti Bianche</strong> sono eventi estivi in cui i centri storici restano aperti tutta la notte con negozi, ristoranti, bar, concerti, spettacoli di strada, mercatini artigianali e mostre d'arte.</p>
+ <h3>🌃 Le Notti Bianche più Famose</h3>
+ <div class="event-card">
+<span class="event-date">🗓️ Luglio-Agosto</span>
+<h4>Notte Bianca di Lecce</h4>
+<p class="event-location">Centro Storico di Lecce</p>
+<p>La più famosa e partecipata. Il centro barocco diventa un palcoscenico a cielo aperto con:
+<ul style="margin-left: 25px; margin-top: 10px; line-height: 1.8;">
+<li>🎭 Teatro di strada e performance artistiche</li>
+<li>🖼️ Mostre d'arte e installazioni luminose</li>
+<li>🎶 Concerti di pizzica e musica live in ogni piazza</li>
+<li>🍸 Aperitivi e degustazioni nelle corti storiche</li>
+<li>🛍️ Negozi aperti fino all'alba con sconti speciali</li>
+</ul>
+</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ Agosto</span>
+<h4>Notte Bianca di Gallipoli</h4>
+<p class="event-location">Isola del Centro Storico + Rivabella</p>
+<p>Focus sulla movida e divertimento, con DJ set sulla spiaggia, cocktail bar, gare e spettacoli sul lungomare. L'atmosfera più festaiola!</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ Luglio</span>
+<h4>Notte Bianca di Otranto</h4>
+<p class="event-location">Centro Storico Medievale</p>
+<p>Atmosfera magica tra le mura del castello, concerti nella cattedrale, bancarelle artigianali e il famoso <strong>mercato notturno</strong>.</p>
+</div>
+ <div class="highlight-box">
+<h3>🎯 Cosa Fare durante la Notte Bianca</h3>
+<p>• Passeggiare tra le vie illuminate da installazioni artistiche<br>
+• Cenare all'aperto con tavoli fino a tarda notte<br>
+• Ballare la pizzica nelle piazze<br>
+• Visitare palazzi storici e chiese aperti eccezionalmente<br>
+• Shopping notturno con sconti fino al 50%<br>
+• Gustare pasticciotti e gelato artigianale alle 3 di notte!</p>
+</div>
+ </div>
+ <div class="content-section">
+ <h2>⭐ La Notte di San Lorenzo</h2>
+ <div class="event-card">
+<span class="event-date">🗓️ 10 Agosto (notte tra il 9 e il 10)</span>
+<h4>Notte delle Stelle Cadenti</h4>
+<p>La <strong>Notte di San Lorenzo</strong> è magica nel Salento. Le spiagge si riempiono di persone che attendono le stelle cadenti distesi sulla sabbia, tra chitarre, falò e romantiche passeggiate notturne.</p>
+</div>
+ <h3>🔭 I Posti Migliori per Vedere le Stelle</h3>
+ <div class="event-card">
+<h4>🏖️ Spiagge del Salento</h4>
+<p><strong>Torre Pali:</strong> Spiaggia libera con poca illuminazione artificiale, perfetta per osservare il cielo<br>
+<strong>Pescoluse:</strong> Spiaggia ampia e tranquilla, ideale per stendersi sulla sabbia<br>
+<strong>Punta Prosciutto:</strong> Dune naturali lontano dalle luci della città<br>
+<strong>Torre dell'Orso:</strong> Spiaggia chiusa tra scogliere, atmosfera intima</p>
+</div>
+ <div class="event-card">
+<h4>🎪 Eventi Organizzati</h4>
+<p>Molte località organizzano eventi speciali per San Lorenzo:
+<ul style="margin-left: 25px; margin-top: 10px; line-height: 1.8;">
+<li><strong>Osservazioni astronomiche guidate</strong> con telescopi</li>
+<li><strong>Aperitivi al tramonto</strong> con musica live sulla spiaggia</li>
+<li><strong>Cene sotto le stelle</strong> nelle masserie con menu speciali</li>
+<li><strong>Feste in spiaggia</strong> con DJ set e falò fino all'alba</li>
+</ul>
+</p>
+</div>
+ <div class="info-box">
+<strong>💡 Consigli per la Notte di San Lorenzo:</strong><br>
+• Portate coperte, cuscini o materassini gonfiabili<br>
+• La temperatura scende la notte, portate una felpa<br>
+• Telo o stuoia per stare comodi sulla sabbia<br>
+• Bevande e snack (non sempre ci sono bar aperti)<br>
+• Repellente per zanzare<br>
+• Il periodo migliore va dal 9 al 13 agosto<br>
+• Le stelle cadenti si vedono meglio dopo mezzanotte
+</div>
+ <h3>💙 Il Romanticismo Salentino</h3>
+<p>La Notte di San Lorenzo nel Salento ha un fascino particolare: il mare calmo che riflette le stelle, il rumore delle onde, chitarre che suonano pizzica in lontananza, gruppi di amici riuniti intorno ai falò. È una delle notti più magiche dell'estate salentina, da vivere assolutamente!</p>
+ </div>
+ <div class="content-section">
+ <h2>⛪ Feste Patronali e Eventi Religiosi</h2>
+ <p>Ogni paese del Salento ha la sua <strong>festa patronale</strong>, celebrazioni religiose che diventano grandi eventi popolari con processioni, luminarie spettacolari, concerti e fuochi d'artificio.</p>
+ <h3>🎆 Le Feste più Spettacolari</h3>
+ <div class="event-card">
+<span class="event-date">🗓️ 24-26 Agosto</span>
+<h4>Festa di Sant'Oronzo</h4>
+<p class="event-location">Lecce</p>
+<p>Il santo patrono di Lecce viene celebrato con 3 giorni di festa: concerti in Piazza Sant'Oronzo, mercatini, giostre e la famosa <strong>Fiera di Santa Lucia</strong> con stand gastronomici.</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ 24-25 Luglio</span>
+<h4>Festa della Madonna del Carmine</h4>
+<p class="event-location">Torre Pali</p>
+<p>Festa patronale di Torre Pali con processione in mare, messa sulla spiaggia, concerti e fuochi d'artificio sul lungomare. Un evento sentito da tutta la comunità!</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ 15-17 Luglio</span>
+<h4>Festa di Santa Cristina</h4>
+<p class="event-location">Gallipoli</p>
+<p>Processione della santa patrona per le vie del centro storico con luminarie spettacolari che illuminano tutta la città vecchia.</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ 14-16 Agosto</span>
+<h4>Festa dei Santi Medici</h4>
+<p class="event-location">Galatina</p>
+<p>Celebrazione dei santi Cosma e Damiano, con migliaia di pellegrini. La città si trasforma con bancarelle, concerti e la suggestiva <strong>processione dei ceri</strong>.</p>
+</div>
+ <h3>💡 Le Luminarie Salentine</h3>
+<p>Le <strong>luminarie</strong> sono installazioni luminose spettacolari che decorano le vie durante le feste patronali. Realizzate artigianalmente con migliaia di lampadine colorate, creano vere e proprie opere d'arte luminose che attraversano le strade. Camminare sotto le luminarie di sera è un'esperienza magica e unica del Salento!</p>
+ </div>
+ <div class="content-section">
+ <h2>📌 Altri Eventi Imperdibili</h2>
+ <div class="event-card">
+<span class="event-date">🗓️ Luglio</span>
+<h4>Mercatino dei Gusti</h4>
+<p class="event-location">Lecce, Gallipoli, Otranto</p>
+<p>Mercatino serale con prodotti tipici, artigianato locale, street food salentino e concerti live. Perfetto per acquistare souvenir autentici.</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ Settembre</span>
+<h4>Festa della Vendemmia</h4>
+<p class="event-location">Varie cantine del Salento</p>
+<p>Partecipa alla vendemmia nelle masserie, con tour in vigna, pigiatura dell'uva, degustazioni di vini e cene tipiche. Un'esperienza autentica!</p>
+</div>
+ <div class="event-card">
+<span class="event-date">🗓️ Estate (Giugno-Settembre)</span>
+<h4>Cinema all'aperto</h4>
+<p class="event-location">Castelli e piazze del Salento</p>
+<p>Proiezioni di film sotto le stelle nei cortili dei castelli (Otranto, Lecce, Acaya). Porta un cuscino e goditi il cinema con le onde in sottofondo!</p>
+</div>
+ <div class="highlight-box">
+<h3>🔔 Come Restare Aggiornati</h3>
+<p><strong>Dove trovare info sugli eventi:</strong><br>
+• Pagine Facebook e Instagram dei comuni<br>
+• ProLoco locali (uffici turistici)<br>
+• Manifesti affissi nelle piazze e bar<br>
+• Sito "VisitSalento.it" con calendario eventi<br>
+• Chiedete a noi! Siamo sempre aggiornati su cosa succede 📲</p>
+</div>
+ </div>
+ </div>
+ <!-- Footer -->
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-section">
+<h3>🏖️ Spiagge del Salento</h3>
+<p>Portale dedicato al Spiagge del Salento: scopri spiagge, eventi, attività e appartamenti in affitto nelle località più belle della costa ionica salentina.</p>
+<p style="margin-top: 15px;">🧭 Spiagge del Salento<br>Lecce, Puglia</p>
+</div>
+<div class="footer-section">
+<h3>🔗 Link Utili</h3>
+<a href="/">Home</a>
+<a href="https://torrepalivacanze.it/">I Nostri Appartamenti</a>
+<a href="/spiagge-salento">Guida Spiagge</a>
+<a href="/pescoluse">Pescoluse</a>
+<a href="/torre-pali">Torre Pali</a>
+<a href="/lido-marini">Lido Marini</a>
+<a href="/torre-vado">Torre Vado</a>
+<a href="/eventi-salento">Eventi e Tradizioni</a>
+<a href="/contatti">Contatti</a>
+<a href="/privacy">Privacy Policy</a>
+</div>
+<div class="footer-section">
+<h3>📞 Contatti</h3>
+<p>💬 WhatsApp: <a href="https://wa.me/393804580135" target="_blank">+39 380 458 01 35</a></p>
+<p>📧 Email: info@spiaggedelsalento.it</p>
+<p>🧭 Torre Pali, Salve (LE)<br>Puglia, Italia</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Spiagge del Salento - Tutti i diritti riservati</p>
+</div>
+</footer>
+ <!-- Schema.org Event - Notte della Taranta -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Event",
+ "name": "Notte della Taranta",
+ "description": "Il festival più importante d'Europa dedicato alla musica popolare salentina. Un tour itinerante che tocca diversi borghi del Salento per culminare nel Concertone finale a Melpignano, con oltre 150.000 spettatori.",
+ "image": "https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg",
+ "startDate": "2026-08-01",
+ "endDate": "2026-08-31",
+ "eventStatus": "https://schema.org/EventScheduled",
+ "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+ "location": {
+ "@type": "Place",
+ "name": "Melpignano (finale) e vari borghi del Salento",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Melpignano",
+ "addressRegion": "Puglia",
+ "addressCountry": "IT"
+ }
+ },
+ "organizer": {
+ "@type": "Organization",
+ "name": "Fondazione La Notte della Taranta",
+ "url": "https://www.lanottedellataranta.it"
+ },
+ "performer": {
+ "@type": "MusicGroup",
+ "name": "Orchestra della Notte della Taranta"
+ },
+ "isAccessibleForFree": true
+}
+</script>
+ <!-- Schema.org ItemList - Eventi ricorrenti -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Eventi e Tradizioni del Salento",
+ "description": "Calendario degli eventi principali del Salento: pizzica, sagre, feste patronali e tradizioni locali",
+ "itemListElement": [
+ {
+ "@type": "ListItem",
+ "position": 1,
+ "item": {
+ "@type": "Event",
+ "name": "Notte della Taranta",
+ "startDate": "2026-08",
+ "location": "Melpignano, Salento"
+ }
+ },
+ {
+ "@type": "ListItem",
+ "position": 2,
+ "item": {
+ "@type": "Event",
+ "name": "Sagra della Municeddha",
+ "startDate": "2026-06",
+ "location": "Cannole"
+ }
+ },
+ {
+ "@type": "ListItem",
+ "position": 3,
+ "item": {
+ "@type": "Event",
+ "name": "Fiera di Santa Croce",
+ "startDate": "2026-09",
+ "location": "Torre Paduli, Ruffano"
+ }
+ },
+ {
+ "@type": "ListItem",
+ "position": 4,
+ "item": {
+ "@type": "Event",
+ "name": "Festa di San Rocco",
+ "startDate": "2026-08-16",
+ "location": "Torre Pali, Salve"
+ }
+ }
+ ]
+}
+</script>
+ <!-- Schema.org BreadcrumbList -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ {
+ "@type": "ListItem",
+ "position": 1,
+ "name": "Home",
+ "item": "https://spiaggedelsalento.it/"
+ },
+ {
+ "@type": "ListItem",
+ "position": 2,
+ "name": "Eventi e Tradizioni Salento",
+ "item": "https://spiaggedelsalento.it/eventi-salento.html"
+ }
+ ]
+}
+</script>
+ </BaseLayout>
+ 
+

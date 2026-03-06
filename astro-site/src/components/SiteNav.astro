@@ -1,0 +1,84 @@
+---
+const { guideHref = '/spiagge-salento' } = Astro.props;
+---
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="navbar-brand">🏖️ Spiagge del Salento</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="/" onclick="closeMenu()">Home</a></li>
+      <li class="dropdown">
+        <span class="dropdown-toggle" style="color: #4a5568; font-weight: 500;">Spiagge</span>
+        <div class="dropdown-menu">
+          <a href={guideHref} onclick="closeMenu()">🏖️ Guida Spiagge</a>
+          <a href="/pescoluse" onclick="closeMenu()">Pescoluse</a>
+          <a href="/torre-pali" onclick="closeMenu()">Torre Pali</a>
+          <a href="/lido-marini" onclick="closeMenu()">Lido Marini</a>
+          <a href="/torre-vado" onclick="closeMenu()">Torre Vado</a>
+          <a href="/santa-maria-di-leuca" onclick="closeMenu()">Santa Maria di Leuca</a>
+          <a href="/torre-mozza" onclick="closeMenu()">Torre Mozza</a>
+          <a href="/torre-san-giovanni" onclick="closeMenu()">Torre San Giovanni</a>
+          <a href="/punta-prosciutto" onclick="closeMenu()">Punta Prosciutto</a>
+          <a href="/porto-cesareo" onclick="closeMenu()">Porto Cesareo</a>
+          <a href="/castro" onclick="closeMenu()">Castro</a>
+          <a href="/marina-di-felloniche" onclick="closeMenu()">Marina di Felloniche</a>
+          <a href="/gallipoli" onclick="closeMenu()">Gallipoli</a>
+          <a href="/porto-selvaggio" onclick="closeMenu()">Porto Selvaggio</a>
+        </div>
+      </li>
+      <li><a href="/eventi-salento" onclick="closeMenu()">Eventi & Attività</a></li>
+      <li><a href="/contatti" onclick="closeMenu()">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+.navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(14, 165, 233, 0.12); box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); z-index: 1000; transition: all 0.3s ease; }
+.navbar:hover { box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1); }
+.navbar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 30px; }
+.navbar-brand { font-size: 1.4em; font-weight: 700; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; transition: transform 0.3s; }
+.navbar-brand:hover { transform: scale(1.05); }
+
+.navbar-menu { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+.navbar-menu > li { position: relative; }
+.navbar-menu a { color: #4a5568; text-decoration: none; font-weight: 500; transition: all 0.3s; position: relative; padding: 5px 0; display: block; }
+.navbar-menu a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); transition: width 0.3s; }
+.navbar-menu a:hover { color: #0ea5e9; }
+.navbar-menu a:hover::after { width: 100%; }
+
+.dropdown { position: relative; }
+.dropdown-toggle { cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 5px 0; }
+.dropdown-toggle::before { content: '\25BC'; font-size: 0.7em; transition: transform 0.3s; }
+.dropdown:hover .dropdown-toggle::before { transform: rotate(180deg); }
+.dropdown-menu { position: absolute; top: 100%; left: 0; background: white; min-width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 15px; padding: 15px 0; margin-top: 10px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s; z-index: 1000; }
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a { padding: 12px 25px; color: #4a5568; font-weight: 500; white-space: nowrap; }
+.dropdown-menu a::after { display: none; }
+.dropdown-menu a:hover { background: rgba(14, 165, 233, 0.1); color: #0ea5e9; }
+
+.hamburger { display: none; flex-direction: column; cursor: pointer; }
+.hamburger span { width: 25px; height: 3px; background: #2c3e50; margin: 3px 0; transition: 0.3s; border-radius: 3px; }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .navbar-container { padding: 16px 20px; }
+  .navbar-menu { position: fixed; left: -100%; top: 70px; flex-direction: column; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); width: 80%; max-width: 300px; height: calc(100vh - 70px); padding: 30px 20px; box-shadow: 2px 0 20px rgba(0,0,0,0.1); transition: left 0.3s; gap: 0; }
+  .navbar-menu.active { left: 0; }
+  .navbar-menu li { margin: 0; padding: 0; border-bottom: 1px solid rgba(14, 165, 233, 0.1); width: 100%; }
+  .navbar-menu a { display: block; font-size: 1.1em; padding: 15px 0; }
+  .dropdown-menu { position: static; box-shadow: none; padding: 0 0 0 20px; margin: 0; opacity: 1; visibility: visible; transform: none; max-height: 0; overflow: hidden; transition: max-height 0.3s; background: transparent; }
+  .dropdown.active .dropdown-menu { max-height: 320px; padding: 10px 0 10px 20px; }
+  .dropdown:hover .dropdown-menu { max-height: 0; }
+  .dropdown-toggle { padding: 16px 0; display: block; width: 100%; }
+  .dropdown-toggle::before { display: inline-block; }
+  .dropdown.active .dropdown-toggle::before { transform: rotate(180deg); }
+}
+
+@media (max-width: 480px) {
+  .navbar-container { padding: 14px 16px; }
+}
+</style>
