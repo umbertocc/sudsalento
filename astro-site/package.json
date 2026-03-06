@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "seo:audit:docs": "node scripts/seo-audit-docs.mjs ../docs"
   },
   "dependencies": {
     "astro": "^5.4.2"

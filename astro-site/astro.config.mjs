@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://spiaggedelsalento.it'
+  site: 'https://umbertocc.github.io',
+  base: '/sudsalento'
 });

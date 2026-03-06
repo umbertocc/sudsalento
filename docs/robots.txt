@@ -4,7 +4,7 @@ Allow: /
 
 # Disallow crawling of internal/private paths (if any)
 Disallow: /logo-generator
-Disallow: /logo-generator/
+Disallow: /logo-generator.html
 
 # Specify sitemap location
 Sitemap: https://spiaggedelsalento.it/sitemap.xml
