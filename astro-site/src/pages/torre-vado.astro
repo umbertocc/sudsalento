@@ -1,4 +1,4 @@
-Ôªø---
+---
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://spiaggedelsalento.it/img/logo.png">
 <link rel="shortcut icon" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/sudsalento/manifest.json">
 <meta name="twitter:title" content="Torre Vado Salento | Marina e Piscina Naturale">
 <meta name="twitter:description" content="Marina pittoresca con piscina naturale e grotte marine nel Salento ionico.">
 <meta name="twitter:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
@@ -66,14 +66,14 @@ header h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); margin-bottom: 12px; font-wei
 .info-card { background: linear-gradient(135deg, rgba(14, 165, 233, 0.04) 0%, rgba(56, 189, 248, 0.03) 100%); padding: 20px; border-radius: 14px; text-align: center; transition: all 0.25s ease; border: 1px solid rgba(14, 165, 233, 0.1); }
 .info-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(14, 165, 233, 0.12); }
 .info-card-icon { font-size: 3em; margin-bottom: 15px; }
-.info-card-icon::before { content: var(--info-icon, '‚ú®'); }
+.info-card-icon::before { content: var(--info-icon, '?'); }
 .info-card h4 { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; font-size: 1.12em; font-weight: 600; }
 .info-card p { color: #64748b; font-size: 0.95em; }
 .features-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 25px 0; }
 .feature-item { display: flex; align-items: center; gap: 15px; padding: 18px; background: rgba(14, 165, 233, 0.05); border-radius: 15px; border: 1px solid rgba(14, 165, 233, 0.1); transition: all 0.3s; }
 .feature-item:hover { background: rgba(14, 165, 233, 0.1); transform: translateX(5px); }
 .feature-item-icon { font-size: 2em; color: #0ea5e9; }
-.feature-item-icon::before { content: var(--feature-icon, '‚úÖ'); }
+.feature-item-icon::before { content: var(--feature-icon, '?'); }
 .cta-section { text-align: center; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 46px 26px; border-radius: 20px; margin-top: 26px; box-shadow: 0 14px 34px rgba(14, 165, 233, 0.24); animation: fadeInUp 0.8s ease-out; }
 .cta-section h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); margin-bottom: 14px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 .cta-section p { font-size: 1.06em; margin-bottom: 20px; opacity: 0.95; font-weight: 400; }
@@ -102,9 +102,9 @@ header h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); margin-bottom: 12px; font-wei
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- Navbar -->
-<SiteNav guideHref="/spiagge-salento" />
+<SiteNav guidehref="/sudsalento/spiagge-salento" />
  <div class="container">
-<a href="/" class="back-btn">‚Üê Torna alla homepage</a>
+<a href="/sudsalento/" class="back-btn">? Torna alla homepage</a>
  <header>
 <h1>Torre Vado</h1>
 <p class="subtitle">Marina Pittoresca con Piscina Naturale e Grotte Marine</p>
@@ -112,10 +112,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="content-section">
 <h2>Benvenuti a Torre Vado</h2>
 <p>
-<strong>Torre Vado</strong> √® una caratteristica marina situata nel comune di <strong>Morciano di Leuca</strong>, a pochi chilometri da Torre Pali e Santa Maria di Leuca. Questa localit√† balneare rappresenta una delle destinazioni pi√π affascinanti del basso Salento, famosa per la sua <strong>piscina naturale</strong>, il piccolo porto turistico e le acque cristalline del Mar Ionio.
+<strong>Torre Vado</strong> Ë una caratteristica marina situata nel comune di <strong>Morciano di Leuca</strong>, a pochi chilometri da Torre Pali e Santa Maria di Leuca. Questa localit‡ balneare rappresenta una delle destinazioni pi˘ affascinanti del basso Salento, famosa per la sua <strong>piscina naturale</strong>, il piccolo porto turistico e le acque cristalline del Mar Ionio.
 </p>
 <p>
-Torre Vado si distingue per l'atmosfera autentica di borgo marinaro, dove i pescatori ancora portano il pesce fresco ogni mattina e le tradizioni locali sono vive e sentite. Il paese si sviluppa intorno al porticciolo e alla spiaggia, creando un ambiente intimo e accogliente perfetto per famiglie e coppie in cerca di tranquillit√†.
+Torre Vado si distingue per l'atmosfera autentica di borgo marinaro, dove i pescatori ancora portano il pesce fresco ogni mattina e le tradizioni locali sono vive e sentite. Il paese si sviluppa intorno al porticciolo e alla spiaggia, creando un ambiente intimo e accogliente perfetto per famiglie e coppie in cerca di tranquillit‡.
 </p>
  <div class="info-grid">
 <div class="info-card">
@@ -142,7 +142,7 @@ Torre Vado si trova sulla costa ionica del Salento, a soli <strong>2 km da Torre
  <div class="content-section">
 <h2>La Piscina Naturale di Torre Vado</h2>
 <p>
-La caratteristica pi√π famosa di Torre Vado √® senza dubbio la sua <strong>piscina naturale</strong>, una grande insenatura protetta da scogli naturali dove l'acqua del mare crea una sorta di piscina a cielo aperto con fondali bassi e acque calme.
+La caratteristica pi˘ famosa di Torre Vado Ë senza dubbio la sua <strong>piscina naturale</strong>, una grande insenatura protetta da scogli naturali dove l'acqua del mare crea una sorta di piscina a cielo aperto con fondali bassi e acque calme.
 </p>
  <h3>Caratteristiche della Piscina</h3>
 <div class="features-list">
@@ -150,7 +150,7 @@ La caratteristica pi√π famosa di Torre Vado √® senza dubbio la sua <strong>pisci
 <div class="feature-item-icon"></div>
 <div>
 <strong>Acqua Cristallina</strong><br>
-<span style="color: #555;">Trasparenza eccezionale, visibilit√† perfetta</span>
+<span style="color: #555;">Trasparenza eccezionale, visibilit‡ perfetta</span>
 </div>
 </div>
 <div class="feature-item">
@@ -176,27 +176,27 @@ La caratteristica pi√π famosa di Torre Vado √® senza dubbio la sua <strong>pisci
 </div>
 </div>
  <p>
-La piscina naturale √® circondata da <strong>scogli piatti</strong> dove √® possibile prendere il sole e tuffarsi direttamente in acqua. Durante l'estate, questo luogo diventa il ritrovo preferito di famiglie con bambini grazie alla sicurezza e alla bellezza del posto.
+La piscina naturale Ë circondata da <strong>scogli piatti</strong> dove Ë possibile prendere il sole e tuffarsi direttamente in acqua. Durante l'estate, questo luogo diventa il ritrovo preferito di famiglie con bambini grazie alla sicurezza e alla bellezza del posto.
 </p>
  <div class="highlight-box">
 <h3>Consigli Pratici</h3>
 <p>
-‚úÖ <strong>Orario Migliore:</strong> Mattina presto per trovare posto sugli scogli<br>
-‚úÖ <strong>Attrezzatura:</strong> Maschera e pinne per esplorare i fondali<br>
-‚úÖ <strong>Accesso:</strong> Scale naturali tra le rocce<br>
-‚úÖ <strong>Parcheggio:</strong> A pagamento vicino al porto<br>
-‚úÖ <strong>Per Bambini:</strong> Ideale per i pi√π piccoli, acqua bassa e sicura
+? <strong>Orario Migliore:</strong> Mattina presto per trovare posto sugli scogli<br>
+? <strong>Attrezzatura:</strong> Maschera e pinne per esplorare i fondali<br>
+? <strong>Accesso:</strong> Scale naturali tra le rocce<br>
+? <strong>Parcheggio:</strong> A pagamento vicino al porto<br>
+? <strong>Per Bambini:</strong> Ideale per i pi˘ piccoli, acqua bassa e sicura
 </p>
 </div>
 </div>
  <div class="content-section">
 <h2>Il Porto e la Vita Marina</h2>
 <p>
-Il piccolo <strong>porto turistico di Torre Vado</strong> √® il cuore pulsante della localit√†. Qui si trovano barche da pesca, imbarcazioni private e un'atmosfera autentica di borgo marinaro. Al mattino presto si pu√≤ assistere al rientro dei pescatori con il pescato fresco che viene poi venduto direttamente sul molo.
+Il piccolo <strong>porto turistico di Torre Vado</strong> Ë il cuore pulsante della localit‡. Qui si trovano barche da pesca, imbarcazioni private e un'atmosfera autentica di borgo marinaro. Al mattino presto si puÚ assistere al rientro dei pescatori con il pescato fresco che viene poi venduto direttamente sul molo.
 </p>
  <h3>Tradizione Peschereccia</h3>
 <p>
-Torre Vado mantiene viva la tradizione della pesca artigianale. I pescatori locali utilizzano ancora metodi tradizionali e portano ogni giorno pesce freschissimo: orate, spigole, calamari, polpi, gamberoni e pesci di scoglio. Molti ristoranti del paese servono il pescato del giorno, garantendo freschezza e qualit√†.
+Torre Vado mantiene viva la tradizione della pesca artigianale. I pescatori locali utilizzano ancora metodi tradizionali e portano ogni giorno pesce freschissimo: orate, spigole, calamari, polpi, gamberoni e pesci di scoglio. Molti ristoranti del paese servono il pescato del giorno, garantendo freschezza e qualit‡.
 </p>
  <div class="features-list">
 <div class="feature-item">
@@ -238,21 +238,21 @@ Oltre alla piscina naturale, Torre Vado offre diverse spiagge sabbiose attrezzat
 <p>
 <strong>Spiaggia della Scogliera:</strong> Zona rocciosa con piattaforme naturali per prendere il sole e tuffarsi<br>
 <strong>Spiaggia del Porto:</strong> Sabbiosa, vicina ai servizi, attrezzata con ombrelloni<br>
-<strong>Spiaggia Libera:</strong> Tratti di costa non attrezzata per chi cerca tranquillit√†
+<strong>Spiaggia Libera:</strong> Tratti di costa non attrezzata per chi cerca tranquillit‡
 </p>
  <div class="highlight-box">
-<h3>Qualit√† del Mare</h3>
+<h3>Qualit‡ del Mare</h3>
 <p>
-Le acque di Torre Vado sono premiate regolarmente per la loro pulizia e trasparenza. La zona √® nota per avere tra le acque pi√π pulite del Salento, con visibilit√† eccellente anche a occhio nudo. Il fondale degrada dolcemente, permettendo lunghe nuotate in sicurezza.
+Le acque di Torre Vado sono premiate regolarmente per la loro pulizia e trasparenza. La zona Ë nota per avere tra le acque pi˘ pulite del Salento, con visibilit‡ eccellente anche a occhio nudo. Il fondale degrada dolcemente, permettendo lunghe nuotate in sicurezza.
 </p>
 </div>
 </div>
  <div class="content-section">
 <h2>Gastronomia e Ristoranti</h2>
 <p>
-Torre Vado √® rinomata per i suoi ristoranti di pesce fresco e le trattorie che servono piatti tipici della cucina salentina. La tradizione culinaria del posto si basa sul pescato locale e sui prodotti dell'entroterra.
+Torre Vado Ë rinomata per i suoi ristoranti di pesce fresco e le trattorie che servono piatti tipici della cucina salentina. La tradizione culinaria del posto si basa sul pescato locale e sui prodotti dell'entroterra.
 </p>
- <h3>Specialit√† Locali</h3>
+ <h3>Specialit‡ Locali</h3>
 <div class="features-list">
 <div class="feature-item">
 <div class="feature-item-icon"></div>
@@ -297,27 +297,27 @@ La posizione di Torre Vado permette di esplorare facilmente tutte le attrazioni 
 <div class="info-grid">
 <div class="info-card">
 <div class="info-card-icon"></div>
-<h4><a href="/pescoluse" style="text-decoration: none; color: inherit;">Pescoluse</a></h4>
+<h4><a href="/sudsalento/pescoluse" style="text-decoration: none; color: inherit;">Pescoluse</a></h4>
 <p>Maldive del Salento, sabbia bianchissima e mare turchese. A 3 km da Torre Vado.</p>
-<a href="/pescoluse" style="color: #0ea5e9; font-weight: 600;">Scopri Pescoluse</a>
+<a href="/sudsalento/pescoluse" style="color: #0ea5e9; font-weight: 600;">Scopri Pescoluse</a>
 </div>
 <div class="info-card">
 <div class="info-card-icon"></div>
-<h4><a href="/torre-pali" style="text-decoration: none; color: inherit;">Torre Pali</a></h4>
+<h4><a href="/sudsalento/torre-pali" style="text-decoration: none; color: inherit;">Torre Pali</a></h4>
 <p>Isola della Fanciulla, Bandiera Blu, spiagge per famiglie. A 6 km da Torre Vado.</p>
-<a href="/torre-pali" style="color: #0ea5e9; font-weight: 600;">Scopri Torre Pali</a>
+<a href="/sudsalento/torre-pali" style="color: #0ea5e9; font-weight: 600;">Scopri Torre Pali</a>
 </div>
 <div class="info-card">
 <div class="info-card-icon"></div>
-<h4><a href="/lido-marini" style="text-decoration: none; color: inherit;">Lido Marini</a></h4>
-<p>Pineta mediterranea e tranquillit√†. A 9 km da Torre Vado.</p>
-<a href="/lido-marini" style="color: #0ea5e9; font-weight: 600;">Scopri Lido Marini</a>
+<h4><a href="/sudsalento/lido-marini" style="text-decoration: none; color: inherit;">Lido Marini</a></h4>
+<p>Pineta mediterranea e tranquillit‡. A 9 km da Torre Vado.</p>
+<a href="/sudsalento/lido-marini" style="color: #0ea5e9; font-weight: 600;">Scopri Lido Marini</a>
 </div>
 </div>
  <p style="text-align: center; margin-top: 30px;">
-<a href="/spiagge-salento" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);"> Vedi Tutte le Spiagge del Salento</a>
+<a href="/sudsalento/spiagge-salento" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);"> Vedi Tutte le Spiagge del Salento</a>
 </p>
- <h3>Distanze dalle Principali Localit√†</h3>
+ <h3>Distanze dalle Principali Localit‡</h3>
 <div class="features-list">
 <div class="feature-item">
 <div class="feature-item-icon"></div>
@@ -344,7 +344,7 @@ La posizione di Torre Vado permette di esplorare facilmente tutte le attrazioni 
 <div class="feature-item-icon"></div>
 <div>
 <strong>Specchia (20 km)</strong><br>
-<span style="color: #555;">Borgo medievale pi√π bello d'Italia</span>
+<span style="color: #555;">Borgo medievale pi˘ bello d'Italia</span>
 </div>
 </div>
 </div>
@@ -356,7 +356,7 @@ Dal porto di Torre Vado partono escursioni giornaliere verso le <strong>grotte m
  <div class="content-section">
 <h2>Come Arrivare e Servizi</h2>
 <p>
-Torre Vado √® facilmente raggiungibile in auto da tutte le principali localit√† del Salento.
+Torre Vado Ë facilmente raggiungibile in auto da tutte le principali localit‡ del Salento.
 </p>
  <h3>Indicazioni Stradali</h3>
 <p>
@@ -402,20 +402,20 @@ Parcheggi a pagamento disponibili vicino al porto e alla piscina naturale. Duran
 </div>
  <div class="cta-section">
 <h2>Scopri Torre Vado</h2>
-<p>Prenota la tua vacanza a due passi dalla piscina naturale pi√π bella del Salento</p>
+<p>Prenota la tua vacanza a due passi dalla piscina naturale pi˘ bella del Salento</p>
 <a href="https://torrepalivacanze.it" class="btn"><span>Vedi Appartamenti</span></a>
-<a href="/contatti" class="btn"><span>Contattaci</span></a>
+<a href="/sudsalento/contatti" class="btn"><span>Contattaci</span></a>
 </div>
 </div>
  <!-- Footer -->
-<SiteFooter guideHref="/spiagge-salento" placeHtml="Torre Vado, Lecce (LE)<br />Salento, Puglia" />
+<SiteFooter guidehref="/sudsalento/spiagge-salento" placeHtml="Torre Vado, Lecce (LE)<br />Salento, Puglia" />
  <!-- Schema.org TouristAttraction -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "TouristAttraction",
  "name": "Torre Vado - Marina e Piscina Naturale",
- "description": "Torre Vado √® una marina pittoresca famosa per la sua piscina naturale, un'insenatura protetta da scogli dove l'acqua cristallina crea una sorta di piscina a cielo aperto. Porto turistico con barche da pesca e tradizione marinara autentica.",
+ "description": "Torre Vado Ë una marina pittoresca famosa per la sua piscina naturale, un'insenatura protetta da scogli dove l'acqua cristallina crea una sorta di piscina a cielo aperto. Porto turistico con barche da pesca e tradizione marinara autentica.",
  "image": [
  "https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg",
  "https://spiaggedelsalento.it/img/torre-pali/spiaggia1.jpg",

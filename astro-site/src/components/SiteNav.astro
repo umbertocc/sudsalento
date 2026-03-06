@@ -3,30 +3,30 @@ const { guideHref = '/spiagge-salento' } = Astro.props;
 ---
 <nav class="navbar">
   <div class="navbar-container">
-    <a href="/" class="navbar-brand">🏖️ Spiagge del Salento</a>
+    <a href="/sudsalento/" class="navbar-brand">🏖️ Spiagge del Salento</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <ul class="navbar-menu" id="navbarMenu">
-      <li><a href="/" onclick="closeMenu()">Home</a></li>
+      <li><a href="/sudsalento/" onclick="closeMenu()">Home</a></li>
       <li class="dropdown">
         <span class="dropdown-toggle" style="color: #4a5568; font-weight: 500;">Spiagge</span>
         <div class="dropdown-menu">
           <a href={guideHref} onclick="closeMenu()">🏖️ Guida Spiagge</a>
-          <a href="/pescoluse" onclick="closeMenu()">Pescoluse</a>
-          <a href="/torre-pali" onclick="closeMenu()">Torre Pali</a>
-          <a href="/lido-marini" onclick="closeMenu()">Lido Marini</a>
-          <a href="/torre-vado" onclick="closeMenu()">Torre Vado</a>
-          <a href="/santa-maria-di-leuca" onclick="closeMenu()">Santa Maria di Leuca</a>
-          <a href="/torre-mozza" onclick="closeMenu()">Torre Mozza</a>
-          <a href="/torre-san-giovanni" onclick="closeMenu()">Torre San Giovanni</a>
-          <a href="/marina-di-felloniche" onclick="closeMenu()">Marina di Felloniche</a>
+          <a href="/sudsalento/pescoluse" onclick="closeMenu()">Pescoluse</a>
+          <a href="/sudsalento/torre-pali" onclick="closeMenu()">Torre Pali</a>
+          <a href="/sudsalento/lido-marini" onclick="closeMenu()">Lido Marini</a>
+          <a href="/sudsalento/torre-vado" onclick="closeMenu()">Torre Vado</a>
+          <a href="/sudsalento/santa-maria-di-leuca" onclick="closeMenu()">Santa Maria di Leuca</a>
+          <a href="/sudsalento/torre-mozza" onclick="closeMenu()">Torre Mozza</a>
+          <a href="/sudsalento/torre-san-giovanni" onclick="closeMenu()">Torre San Giovanni</a>
+          <a href="/sudsalento/marina-di-felloniche" onclick="closeMenu()">Marina di Felloniche</a>
         </div>
       </li>
-      <li><a href="/eventi-salento" onclick="closeMenu()">Eventi & Attività</a></li>
-      <li><a href="/contatti" onclick="closeMenu()">Contatti</a></li>
+      <li><a href="/sudsalento/eventi-salento" onclick="closeMenu()">Eventi & Attività</a></li>
+      <li><a href="/sudsalento/contatti" onclick="closeMenu()">Contatti</a></li>
     </ul>
   </div>
 </nav>
