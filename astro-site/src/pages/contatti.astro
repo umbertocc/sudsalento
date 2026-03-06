@@ -110,10 +110,26 @@ header h1 { font-size: 3em; margin-bottom: 15px; font-weight: 700; text-shadow: 
 .form-btn:hover::before { opacity: 1; }
 .success-message { display: none; background: linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(56, 161, 105, 0.1) 100%); color: #38a169; padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 2px solid #48bb78; font-weight: 500; }
 @media (max-width: 768px) {
- .container { padding: 15px; }
- header h1 { font-size: 1.8em; }
+ .container { padding: 18px 16px; }
+ header { padding: 46px 18px; border-radius: 18px; margin-bottom: 36px; }
+ header h1 { font-size: 2em; line-height: 1.2; margin-bottom: 10px; }
+ header p { font-size: 1rem !important; margin-top: 10px !important; }
  .content-grid { grid-template-columns: 1fr; }
+ .content-grid { gap: 24px; margin-bottom: 34px; }
+ .contact-info, .contact-form { padding: 28px 20px; border-radius: 18px; }
+ .contact-info h2, .contact-form h2 { font-size: 1.55em; margin-bottom: 20px; }
+ .contact-method p { font-size: 1.02em; }
+ .form-btn { padding: 14px 28px; font-size: 1.02em; }
  .footer-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+ .container { padding: 14px 12px; }
+ header { padding: 40px 14px; border-radius: 16px; }
+ header h1 { font-size: 1.78em; }
+ .contact-info, .contact-form { padding: 22px 14px; border-radius: 16px; }
+ .contact-info h2, .contact-form h2 { font-size: 1.42em; }
+ .form-group input, .form-group textarea { padding: 12px; }
 }
 </style>
  </Fragment>

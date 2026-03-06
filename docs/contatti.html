@@ -420,15 +420,21 @@ document.addEventListener('DOMContentLoaded', function(){
 	window.toggleMenu = function toggleMenu() {
 		const menu = document.getElementById('navbarMenu');
 		if (!menu) return;
-		menu.classList.toggle('active');
+		const isActive = menu.classList.toggle('active');
+		if (!isActive) {
+			document.querySelectorAll('.dropdown.active').forEach((dropdown) => {
+				dropdown.classList.remove('active');
+			});
+		}
 	};
 
 	window.closeMenu = function closeMenu() {
 		const menu = document.getElementById('navbarMenu');
 		if (!menu) return;
 		menu.classList.remove('active');
-		const dropdown = document.querySelector('.dropdown');
-		if (dropdown) dropdown.classList.remove('active');
+		document.querySelectorAll('.dropdown.active').forEach((dropdown) => {
+			dropdown.classList.remove('active');
+		});
 	};
 
 	document.addEventListener('click', (event) => {
@@ -437,22 +443,25 @@ document.addEventListener('DOMContentLoaded', function(){
 		if (!navbar || !menu) return;
 		if (!navbar.contains(event.target) && menu.classList.contains('active')) {
 			menu.classList.remove('active');
-			const dropdown = document.querySelector('.dropdown');
-			if (dropdown) dropdown.classList.remove('active');
+			document.querySelectorAll('.dropdown.active').forEach((dropdown) => {
+				dropdown.classList.remove('active');
+			});
 		}
 	});
 
-	const dropdownToggle = document.querySelector('.dropdown-toggle');
-	const dropdown = document.querySelector('.dropdown');
-	if (dropdownToggle && dropdown) {
-		dropdownToggle.addEventListener('click', (event) => {
-			if (window.innerWidth <= 768) {
-				event.preventDefault();
-				event.stopPropagation();
-				dropdown.classList.toggle('active');
-			}
-		});
-	}
+	document.addEventListener('click', (event) => {
+		if (window.innerWidth > 768) return;
+		const target = event.target;
+		const targetElement = target instanceof Element ? target : target instanceof Node ? target.parentElement : null;
+		const dropdownToggle = targetElement ? targetElement.closest('.dropdown-toggle') : null;
+		if (!dropdownToggle) return;
+		event.preventDefault();
+		event.stopPropagation();
+		const dropdown = dropdownToggle.closest('.dropdown');
+		if (dropdown) {
+			dropdown.classList.toggle('active');
+		}
+	});
 })();
 </script>
  </body>
