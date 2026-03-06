@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Italian">
-<meta name="author" content="Affitti Torre Pali">
+<meta name="author" content="Spiagge del Salento">
 <link rel="canonical" href="https://spiaggedelsalento.it/torre-vado">
 <title>Torre Vado Salento | Marina, Piscina Naturale e Grotte Marine</title>
 <meta name="description" content="Torre Vado: marina pittoresca con piscina naturale, grotte marine, porto turistico e spiagge cristalline. Scopri la gemma nascosta del Salento ionico!">
@@ -26,6 +26,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:description" content="Scopri Torre Vado: marina pittoresca, piscina naturale, grotte marine e porto turistico nel cuore del Salento.">
 <meta property="og:url" content="https://spiaggedelsalento.it/torre-vado">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Spiagge del Salento">
 <meta property="og:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
 <!-- Twitter Card Tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -47,46 +49,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%); padding-top: 70px; }
-.container { max-width: 1200px; margin: 0 auto; padding: 30px; }
-.back-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; margin-bottom: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3); transition: all 0.3s; }
-.back-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5); }
-header { text-align: center; margin-bottom: 50px; padding: 80px 20px; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 30px; box-shadow: 0 20px 60px rgba(14, 165, 233, 0.3); animation: fadeIn 0.8s ease-out; }
-header h1 { font-size: 3.5em; margin-bottom: 15px; font-weight: 700; text-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-.subtitle { font-size: 1.4em; color: rgba(255, 255, 255, 0.95); font-weight: 400; }
-.content-section { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 50px 40px; border-radius: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); margin-bottom: 40px; border: 1px solid rgba(14, 165, 233, 0.1); animation: fadeInUp 0.6s ease-out; }
-.content-section h2 { font-size: 2.5em; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 25px; border-left: 5px solid transparent; border-image: linear-gradient(135deg, #0ea5e9, #0284c7) 1; padding-left: 20px; font-weight: 700; }
-.content-section h3 { font-size: 1.6em; color: #0ea5e9; margin: 30px 0 15px 0; font-weight: 600; }
-.content-section p { font-size: 1.15em; line-height: 1.8; color: #4a5568; margin-bottom: 20px; text-align: justify; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.65; color: #334155; background: radial-gradient(circle at 20% 10%, #eef7ff 0%, #f7fbff 45%, #ffffff 100%); padding-top: 76px; }
+.container { max-width: 1120px; margin: 0 auto; padding: 26px 22px 30px; }
+.back-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 10px 22px; border-radius: 999px; text-decoration: none; margin-bottom: 20px; font-weight: 600; box-shadow: 0 6px 16px rgba(14, 165, 233, 0.24); transition: all 0.25s ease; }
+.back-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(14, 165, 233, 0.28); }
+header { text-align: center; margin-bottom: 36px; padding: 62px 20px; background: linear-gradient(135deg, rgba(14, 165, 233, 0.95) 0%, rgba(2, 132, 199, 0.92) 100%); color: white; border-radius: 22px; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 14px 34px rgba(14, 165, 233, 0.22); animation: fadeIn 0.8s ease-out; }
+header h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); margin-bottom: 12px; font-weight: 700; letter-spacing: -0.015em; text-shadow: 0 2px 10px rgba(0,0,0,0.16); }
+.subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255, 255, 255, 0.95); font-weight: 400; }
+.content-section { background: #fffffffa; backdrop-filter: blur(8px); padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); margin-bottom: 28px; border: 1px solid rgba(14, 165, 233, 0.1); animation: fadeInUp 0.6s ease-out; }
+.content-section h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 20px; padding-left: 14px; border-left: 4px solid rgba(14, 165, 233, 0.4); font-weight: 700; }
+.content-section h3 { font-size: 1.35em; color: #0284c7; margin: 22px 0 12px 0; font-weight: 600; }
+.content-section p { font-size: 1.04em; line-height: 1.78; color: #475569; margin-bottom: 16px; text-align: left; }
 .highlight-box { background: linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(56, 161, 105, 0.1) 100%); border-left: 5px solid #48bb78; padding: 30px; border-radius: 20px; margin: 30px 0; box-shadow: 0 4px 15px rgba(72, 187, 120, 0.1); }
 .highlight-box h3 { color: #48bb78; margin-top: 0; font-weight: 600; }
-.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 30px 0; }
-.info-card { background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(56, 189, 248, 0.05) 100%); padding: 30px; border-radius: 20px; text-align: center; transition: all 0.4s; border: 1px solid rgba(14, 165, 233, 0.1); }
-.info-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(14, 165, 233, 0.2); background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(56, 189, 248, 0.1) 100%); }
+.info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+.info-card { background: linear-gradient(135deg, rgba(14, 165, 233, 0.04) 0%, rgba(56, 189, 248, 0.03) 100%); padding: 20px; border-radius: 14px; text-align: center; transition: all 0.25s ease; border: 1px solid rgba(14, 165, 233, 0.1); }
+.info-card:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(14, 165, 233, 0.12); }
 .info-card-icon { font-size: 3em; margin-bottom: 15px; }
 .info-card-icon::before { content: var(--info-icon, '✨'); }
-.info-card h4 { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; font-size: 1.3em; font-weight: 600; }
-.info-card p { color: #64748b; font-size: 1em; }
+.info-card h4 { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; font-size: 1.12em; font-weight: 600; }
+.info-card p { color: #64748b; font-size: 0.95em; }
 .features-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 25px 0; }
 .feature-item { display: flex; align-items: center; gap: 15px; padding: 18px; background: rgba(14, 165, 233, 0.05); border-radius: 15px; border: 1px solid rgba(14, 165, 233, 0.1); transition: all 0.3s; }
 .feature-item:hover { background: rgba(14, 165, 233, 0.1); transform: translateX(5px); }
 .feature-item-icon { font-size: 2em; color: #0ea5e9; }
 .feature-item-icon::before { content: var(--feature-icon, '✅'); }
-.cta-section { text-align: center; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 60px 40px; border-radius: 30px; margin-top: 40px; box-shadow: 0 20px 60px rgba(14, 165, 233, 0.3); animation: fadeInUp 0.8s ease-out; }
-.cta-section h2 { font-size: 2.5em; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.cta-section p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.95; font-weight: 400; }
-.btn { display: inline-block; background: white; color: #0ea5e9; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 600; margin: 10px; transition: all 0.3s; font-size: 1.1em; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); position: relative; overflow: hidden; }
+.cta-section { text-align: center; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 46px 26px; border-radius: 20px; margin-top: 26px; box-shadow: 0 14px 34px rgba(14, 165, 233, 0.24); animation: fadeInUp 0.8s ease-out; }
+.cta-section h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); margin-bottom: 14px; font-weight: 700; text-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.cta-section p { font-size: 1.06em; margin-bottom: 20px; opacity: 0.95; font-weight: 400; }
+.btn { display: inline-block; background: white; color: #0ea5e9; padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 600; margin: 8px; transition: all 0.25s ease; font-size: 1em; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14); position: relative; overflow: hidden; }
 .btn::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); opacity: 0; transition: opacity 0.3s; }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); color: white; }
 .btn:hover::before { opacity: 1; }
 .btn span { position: relative; z-index: 1; }
 @media (max-width: 768px) {
- .container { padding: 15px; }
- header h1 { font-size: 2em; }
- .subtitle { font-size: 1.1em; }
+ .container { padding: 16px 12px 22px; }
+ header { padding: 44px 14px; border-radius: 16px; margin-bottom: 24px; }
+ header h1 { font-size: 1.95em; }
+ .subtitle { font-size: 1em; }
  .info-grid { grid-template-columns: 1fr; }
  .features-list { grid-template-columns: 1fr; }
- .content-section { padding: 30px 20px; }
+ .content-section { padding: 24px 16px; border-radius: 16px; margin-bottom: 20px; }
+}
+@media (max-width: 480px) {
+ .container { padding: 14px 10px 20px; }
+ .btn { width: 100%; margin: 6px 0; text-align: center; }
 }
 </style>
  </Fragment>
@@ -97,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Navbar -->
 <SiteNav guideHref="/spiagge-salento" />
  <div class="container">
-<a href="/" class="back-btn">Torna alla homepage</a>
+<a href="/" class="back-btn">← Torna alla homepage</a>
  <header>
 <h1>Torre Vado</h1>
 <p class="subtitle">Marina Pittoresca con Piscina Naturale e Grotte Marine</p>
@@ -401,7 +408,7 @@ Parcheggi a pagamento disponibili vicino al porto e alla piscina naturale. Duran
 </div>
 </div>
  <!-- Footer -->
-<SiteFooter guideHref="/spiagge-salento" placeHtml="Torre Pali, Lecce (LE)<br />Salento, Puglia" />
+<SiteFooter guideHref="/spiagge-salento" placeHtml="Torre Vado, Lecce (LE)<br />Salento, Puglia" />
  <!-- Schema.org TouristAttraction -->
 <script type="application/ld+json">
 {
@@ -453,13 +460,13 @@ Parcheggi a pagamento disponibili vicino al porto e alla piscina naturale. Duran
  "@type": "ListItem",
  "position": 2,
  "name": "Spiagge Salento",
- "item": "https://spiaggedelsalento.it/spiagge-salento.html"
+ "item": "https://spiaggedelsalento.it/spiagge-salento"
  },
  {
  "@type": "ListItem",
  "position": 3,
  "name": "Torre Vado",
- "item": "https://spiaggedelsalento.it/torre-vado.html"
+ "item": "https://spiaggedelsalento.it/torre-vado"
  }
  ]
 }

@@ -1,0 +1,118 @@
+---
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<Fragment slot="head">
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="Italian" />
+		<meta name="author" content="Spiagge del Salento" />
+		<link rel="canonical" href="https://spiaggedelsalento.it/torre-mozza" />
+		<title>Torre Mozza: guida spiaggia, mare e consigli utili | Spiagge del Salento</title>
+		<meta
+			name="description"
+			content="Scopri Torre Mozza nel Salento: spiaggia sabbiosa, mare limpido e consigli pratici su parcheggi, servizi e periodo migliore per visitarla."
+		/>
+		<meta
+			name="keywords"
+			content="torre mozza, spiaggia torre mozza, salento ionico, ugento mare, vacanze salento, spiagge salento"
+		/>
+		<meta property="og:title" content="Torre Mozza | Guida spiaggia, mare e consigli" />
+		<meta
+			property="og:description"
+			content="Scopri Torre Mozza: spiaggia sabbiosa, mare limpido e consigli pratici su parcheggi, servizi e periodo migliore."
+		/>
+		<meta property="og:url" content="https://spiaggedelsalento.it/torre-mozza" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="it_IT" />
+		<meta property="og:site_name" content="Spiagge del Salento" />
+		<meta property="og:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Torre Mozza | Guida spiaggia e mare" />
+		<meta
+			name="twitter:description"
+			content="Guida pratica a Torre Mozza: spiaggia, mare e consigli utili per organizzare la giornata."
+		/>
+		<meta name="twitter:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg" />
+		<style>
+			* { margin: 0; padding: 0; box-sizing: border-box; }
+			body { font-family: 'Poppins', sans-serif; line-height: 1.65; color: #334155; background: linear-gradient(135deg, #f6fbff 0%, #eef6ff 100%); padding-top: 80px; }
+			.container { max-width: 1080px; margin: 0 auto; padding: 28px 22px 36px; }
+			.back-btn { display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: #fff; padding: 11px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; margin-bottom: 22px; box-shadow: 0 6px 16px rgba(14, 165, 233, 0.24); transition: all 0.25s ease; }
+			.back-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); }
+			header { background: linear-gradient(135deg, rgba(14,165,233,0.96) 0%, rgba(2,132,199,0.92) 100%); color: #fff; border-radius: 22px; padding: 52px 24px; margin-bottom: 28px; box-shadow: 0 14px 34px rgba(14, 165, 233, 0.22); }
+			h1 { font-size: clamp(1.9rem, 4.2vw, 3rem); margin-bottom: 10px; }
+			.subtitle { font-size: 1.08rem; opacity: 0.96; }
+			.card { background: #fff; border: 1px solid rgba(14, 165, 233, 0.12); border-radius: 20px; padding: 30px 24px; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06); margin-bottom: 18px; transition: box-shadow 0.2s ease; }
+			.card:hover { box-shadow: 0 14px 28px rgba(15, 23, 42, 0.09); }
+			.card h2 { font-size: 1.55rem; color: #0284c7; margin-bottom: 12px; }
+			.card p { margin-bottom: 12px; color: #475569; }
+			.tips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 8px; }
+			.tip { background: rgba(14,165,233,0.06); border: 1px solid rgba(14,165,233,0.14); border-radius: 14px; padding: 14px; transition: all 0.2s ease; }
+			.tip:hover { background: rgba(14,165,233,0.1); transform: translateY(-2px); }
+			.tip h3 { color: #0369a1; font-size: 1rem; margin-bottom: 6px; }
+			.cta { text-align: center; background: #0f172a; color: #fff; border-radius: 20px; padding: 32px 22px; margin-top: 12px; }
+			.cta a { display: inline-block; margin-top: 14px; background: #0ea5e9; color: #fff; text-decoration: none; padding: 11px 20px; border-radius: 999px; font-weight: 600; transition: all 0.25s ease; }
+			.cta a:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(14, 165, 233, 0.35); }
+
+			@media (max-width: 768px) {
+				.container { padding: 18px 14px 26px; }
+				header { padding: 42px 16px; border-radius: 16px; }
+				.card { padding: 22px 16px; border-radius: 16px; }
+				.tips { grid-template-columns: 1fr; }
+			}
+		</style>
+	</Fragment>
+
+	<SiteNav guideHref="/spiagge-salento" />
+
+	<div class="container">
+		<a href="/" class="back-btn">← Torna alla homepage</a>
+
+		<header>
+			<h1>Torre Mozza</h1>
+			<p class="subtitle">Una spiaggia del basso Salento ideale per mare limpido, relax e giornate in famiglia.</p>
+		</header>
+
+		<section class="card">
+			<h2>Perché visitarla</h2>
+			<p>
+				Torre Mozza è una località marina della costa ionica salentina apprezzata per l'acqua trasparente,
+				i tratti sabbiosi e l'atmosfera più tranquilla rispetto ad altre zone molto affollate.
+			</p>
+			<p>
+				È una meta comoda sia per coppie sia per famiglie, con servizi vicini e ottima posizione per
+				raggiungere facilmente Pescoluse, Torre Pali e Lido Marini.
+			</p>
+		</section>
+
+		<section class="card">
+			<h2>Consigli pratici</h2>
+			<div class="tips">
+				<div class="tip">
+					<h3>Orario migliore</h3>
+					<p>Mattina presto o tardo pomeriggio per godersi il mare con più calma.</p>
+				</div>
+				<div class="tip">
+					<h3>Parcheggio</h3>
+					<p>Arriva con anticipo nei weekend estivi per trovare posto vicino alla spiaggia.</p>
+				</div>
+				<div class="tip">
+					<h3>Con bambini</h3>
+					<p>Fondale generalmente graduale in molti tratti, utile per famiglie.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta">
+			<h2>Vuoi organizzare la tua vacanza nel Salento?</h2>
+			<p>Contattaci per consigli su spiagge, periodi migliori e appartamenti disponibili.</p>
+			<a href="/contatti">Contattaci</a>
+		</section>
+	</div>
+
+	<SiteFooter guideHref="/spiagge-salento" placeHtml="Torre Mozza, Ugento (LE)<br />Salento, Puglia" />
+</BaseLayout>
+
