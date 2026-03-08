@@ -2,9 +2,16 @@
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const baseHref = import.meta.env.BASE_URL.endsWith('/')
+	? import.meta.env.BASE_URL
+	: `${import.meta.env.BASE_URL}/`;
+
+const withBase = (path) => `${baseHref}${path.replace(/^\/+/, '')}`;
 ---
  <BaseLayout>
 <Fragment slot="head">
+<base href={baseHref}>
 <meta name="robots" content="index, follow">
 <meta name="language" content="Italian">
 <meta name="author" content="Spiagge del Salento">
@@ -40,7 +47,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://spiaggedelsalento.it/img/logo.png">
 <link rel="shortcut icon" href="https://spiaggedelsalento.it/img/logo.png">
-<link rel="manifest" href="/sudsalento/manifest.json">
+<link rel="manifest" href={withBase('manifest.json')}>
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -419,8 +426,8 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h1>Scopri le Spiagge del Salento</h1>
 <p class="tagline">Spiagge Bandiera Blu, Mare Cristallino, Eventi e Appartamenti per le tue Vacanze</p>
 <div class="hero-actions">
- <a href="spiagge-salento" class="btn"><span>Guida Spiagge</span></a>
- <a href="contatti" class="btn"><span>Contattaci</span></a>
+ <a href={withBase('spiagge-salento')} class="btn"><span>Guida Spiagge</span></a>
+ <a href={withBase('contatti')} class="btn"><span>Contattaci</span></a>
 </div>
 </header>
  <div class="hero-section">
@@ -442,7 +449,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Pescoluse</h3>
 <p style="color: #0ea5e9; font-weight: 600; margin-bottom: 15px;">Le Maldive del Salento</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Sabbia bianca finissima e mare cristallino dalle sfumature caraibiche. La spiaggia più famosa del Salento con acqua bassa e fondale sabbioso.</p>
-<a href="pescoluse" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
+<a href={withBase('pescoluse')} style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Torre Pali -->
@@ -454,7 +461,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre Pali</h3>
 <p style="color: #0ea5e9; font-weight: 600; margin-bottom: 15px;">Storia e Mare Cristallino</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Spiaggia sabbiosa con torre aragonese del XVI secolo. Mare trasparente, Isola della Fanciulla e atmosfera autentica con servizi completi.</p>
-<a href="torre-pali" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
+<a href={withBase('torre-pali')} style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Lido Marini -->
@@ -466,19 +473,19 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Lido Marini</h3>
 <p style="color: #0ea5e9; font-weight: 600; margin-bottom: 15px;">Relax e Natura</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Spiaggia tranquilla ideale per famiglie. Sabbia dorata, fondali bassi e sicuri, pineta mediterranea e atmosfera rilassante lontana dal caos.</p>
-<a href="lido-marini" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
+<a href={withBase('lido-marini')} style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Torre Vado -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/prospetto/prospetto_1.jpg" alt="Torre Vado - Porto e calette" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<img src={withBase('img/torre-vado/torrevado.jpg')} alt="Torre Vado - Porto e calette" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre Vado</h3>
 <p style="color: #0ea5e9; font-weight: 600; margin-bottom: 15px;">Porto e Calette</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Caratteristico porticciolo con calette rocciose. Acque trasparenti perfette per snorkeling, ristoranti sul mare e tramonti spettacolari.</p>
-<a href="torre-vado" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
+<a href={withBase('torre-vado')} style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Santa Maria di Leuca -->
@@ -490,7 +497,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Santa Maria di Leuca</h3>
 <p style="color: #9333ea; font-weight: 600; margin-bottom: 15px;">De Finibus Terrae</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Punto più a sud della Puglia. Faro monumentale, santuario, grotte marine e ville liberty. Dove Adriatico e Ionio si incontrano.</p>
-<a href="santa-maria-di-leuca" style="display: inline-block; background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(147, 51, 234, 0.3);">Scopri di più</a>
+<a href={withBase('santa-maria-di-leuca')} style="display: inline-block; background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(147, 51, 234, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Torre Mozza -->
@@ -502,7 +509,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre Mozza</h3>
 <p style="color: #059669; font-weight: 600; margin-bottom: 15px;">Spiaggia Naturale</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Torre costiera mozza del XVI secolo. Spiaggia mista sabbia-scogli, acque cristalline per snorkeling e atmosfera tranquilla.</p>
-<a href="torre-mozza" style="display: inline-block; background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(5, 150, 105, 0.3);">Scopri di più</a>
+<a href={withBase('torre-mozza')} style="display: inline-block; background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(5, 150, 105, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Torre San Giovanni -->
@@ -514,19 +521,19 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre San Giovanni</h3>
 <p style="color: #dc2626; font-weight: 600; margin-bottom: 15px;">Porto & Movida</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Porto turistico moderno, spiaggia attrezzata e lungomare animato. Ideale per famiglie con bambini e vita notturna.</p>
-<a href="torre-san-giovanni" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);">Scopri di più</a>
+<a href={withBase('torre-san-giovanni')} style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Punta Prosciutto -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="/sudsalento/img/torre-pali/torrepali3.jpg" alt="Punta Prosciutto - Dune e Mare Caraibico" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<img src={withBase('img/torre-pali/torrepali3.jpg')} alt="Punta Prosciutto - Dune e Mare Caraibico" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Punta Prosciutto</h3>
 <p style="color: #14b8a6; font-weight: 600; margin-bottom: 15px;">Dune e Natura</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Dune sabbiose naturali, pineta mediterranea e mare turchese. Spiaggia incontaminata ideale per famiglie e amanti della natura.</p>
-<a href="punta-prosciutto" style="display: inline-block; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(20, 184, 166, 0.3);">Scopri di più</a>
+<a href={withBase('punta-prosciutto')} style="display: inline-block; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(20, 184, 166, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Porto Cesareo -->
@@ -538,7 +545,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Porto Cesareo</h3>
 <p style="color: #1e40af; font-weight: 600; margin-bottom: 15px;">Riserva Marina Protetta</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Area Marina Protetta, Isola dei Conigli, Torre Cesarea. Paradiso per snorkeling, diving e amanti del mare.</p>
-<a href="porto-cesareo" style="display: inline-block; background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);">Scopri di più</a>
+<a href={withBase('porto-cesareo')} style="display: inline-block; background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Castro -->
@@ -550,7 +557,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Castro</h3>
 <p style="color: #ea580c; font-weight: 600; margin-bottom: 15px;">Borgo Medievale</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Castello aragonese, Grotta Zinzulusa famosa, centro storico medievale. Spiagge rocciose e storia millenaria.</p>
-<a href="castro" style="display: inline-block; background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(234, 88, 12, 0.3);">Scopri di più</a>
+<a href={withBase('castro')} style="display: inline-block; background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(234, 88, 12, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Marina di Felloniche -->
@@ -562,7 +569,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Marina di Felloniche</h3>
 <p style="color: #06b6d4; font-weight: 600; margin-bottom: 15px;">Tranquillità e Natura</p>
 <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Dune sabbiose, pineta protetta e spiaggia tranquilla. Mare cristallino in zona naturalistica ideale per famiglie.</p>
-<a href="marina-di-felloniche" style="display: inline-block; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);">Scopri di più</a>
+<a href={withBase('marina-di-felloniche')} style="display: inline-block; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);">Scopri di più</a>
 </div>
 </div>
  <!-- Gallipoli -->
@@ -574,7 +581,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Gallipoli</h3>
  <p style="color: #38a169; font-weight: 600; margin-bottom: 15px;">Spiagge & Movida</p>
  <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Baia Verde, centro storico su isola, beach party e vita notturna. Ideale per giovani, famiglie e chi cerca divertimento.</p>
- <a href="gallipoli" style="display: inline-block; background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(56, 161, 105, 0.3);">Scopri di più</a>
+ <a href={withBase('gallipoli')} style="display: inline-block; background: linear-gradient(135deg, #38a169 0%, #48bb78 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(56, 161, 105, 0.3);">Scopri di più</a>
  </div>
 </div>
  <!-- Porto Selvaggio -->
@@ -586,12 +593,12 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Porto Selvaggio</h3>
  <p style="color: #0ea5e9; font-weight: 600; margin-bottom: 15px;">Parco Naturale</p>
  <p style="color: #4a5568; line-height: 1.7; margin-bottom: 20px;">Pineta, scogliere e mare cristallino. Area protetta ideale per escursioni, snorkeling e relax nella natura.</p>
- <a href="porto-selvaggio" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
+ <a href={withBase('porto-selvaggio')} style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);">Scopri di più</a>
  </div>
 </div>
 </div>
  <div style="text-align: center;">
-<a href="spiagge-salento" style="display: inline-block; background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.4s; box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);">Guida completa alle spiagge</a>
+<a href={withBase('spiagge-salento')} style="display: inline-block; background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.4s; box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);">Guida completa alle spiagge</a>
 </div>
 </div>
  <!-- Sezione Eventi -->
@@ -637,7 +644,7 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 </div>
 </div>
  <div style="text-align: center;">
-<a href="eventi-salento" style="display: inline-block; background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.4s; box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);">Vedi eventi e tradizioni</a>
+<a href={withBase('eventi-salento')} style="display: inline-block; background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.4s; box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);">Vedi eventi e tradizioni</a>
 </div>
 </div>
  <script>
@@ -655,7 +662,7 @@ window.addEventListener('load', function() {
 <h2>Perché scegliere le Spiagge del Salento?</h2>
 <p>Le <strong>Spiagge del Salento</strong> offrono tutto ciò che serve per una vacanza perfetta: spiagge sabbiose con mare cristallino, fondali bassi ideali per famiglie, un'atmosfera autentica e una cucina locale genuina. Dalle <strong>Maldive del Salento</strong> di Pescoluse alle calette di Torre Vado, ogni località ha il suo fascino unico.</p>
 <p>Potrai esplorare <strong>torri costiere aragonesi</strong> del XVI secolo, scoprire leggende romantiche come quella dell'<strong>Isola della Fanciulla</strong> a Torre Pali, fare snorkeling in acque cristalline e godere di tramonti spettacolari sul mare Ionio.</p>
-<p style="text-align: center; margin-top: 25px;"><a href="spiagge-salento" class="btn" style="background: linear-gradient(135deg, #3498db, #2980b9);">Scopri le Spiagge del Salento</a></p>
+<p style="text-align: center; margin-top: 25px;"><a href={withBase('spiagge-salento')} class="btn" style="background: linear-gradient(135deg, #3498db, #2980b9);">Scopri le Spiagge del Salento</a></p>
  <div class="highlights">
 <div class="highlight">
 <div class="highlight-title">Spiagge Bandiera Blu</div>
@@ -679,7 +686,7 @@ window.addEventListener('load', function() {
 <h2>Prenota la Tua Vacanza nel Salento</h2>
 <p>Scegli i nostri appartamenti a Torre Pali e scopri tutte le spiagge più belle</p>
 <a href="https://torrepalivacanze.it/" class="btn"><span>Vedi Appartamenti</span></a>
-<a href="contatti" class="btn"><span>Contattaci</span></a>
+<a href={withBase('contatti')} class="btn"><span>Contattaci</span></a>
 </div>
 </div>
  <div style="text-align: center; margin-top: 50px; padding: 40px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -687,16 +694,16 @@ window.addEventListener('load', function() {
 <p style="color: #555; margin-bottom: 25px;">Siamo disponibili per rispondere a tutte le tue domande sulle Spiagge del Salento e gli appartamenti disponibili.</p>
 <a href="https://wa.me/393804580135?text=Ciao!%20Vorrei%20informazioni%20sul%20Sud%20Salento%20e%20sugli%20appartamenti%20disponibili" class="btn" data-tooltip="Chatta con noi ora" onclick="gtag('event', 'whatsapp_click', {'event_category': 'Contact', 'event_label': 'Homepage - CTA Section'});">WhatsApp</a>
 <a href="tel:+393804580135" class="btn">Chiama</a>
-<a href="contatti" class="btn">Form contatti</a>
+<a href={withBase('contatti')} class="btn">Form contatti</a>
 <p style="margin-top: 20px; color: #7f8c8d;">+39 380 458 01 35 è Risposta entro 1h</p>
-<p style="margin-top: 25px; font-size: 0.85em; color: #95a5a6;"><a href="privacy" style="color: #95a5a6; text-decoration: none;">Privacy Policy</a></p>
+<p style="margin-top: 25px; font-size: 0.85em; color: #95a5a6;"><a href={withBase('privacy')} style="color: #95a5a6; text-decoration: none;">Privacy Policy</a></p>
 </div>
 </div>
  <!-- Footer -->
-<SiteFooter guideHref="/sudsalento/spiagge-salento" place="Lecce, Puglia" />
+<SiteFooter guideHref={withBase('spiagge-salento')} place="Lecce, Puglia" />
  <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script>
+<script define:vars={{ baseHref }}>
 // Inizializza mappa
 var mapElement = document.getElementById('interactive-map');
 if (mapElement && typeof L !== 'undefined') {
@@ -739,11 +746,11 @@ var houseIcon = L.divIcon({
 });
  // Markers Case Vacanze - Via Vasco de Gama
 L.marker([39.8393, 18.2105], {icon: houseIcon}).addTo(map)
- .bindPopup('<b>Casa Bellavista 2</b><br>Via Vasco de Gama 5<br>20m dalla spiaggia<br><a href="casa-bellavista-2">Vedi dettagli</a>');
+ .bindPopup('<b>Casa Bellavista 2</b><br>Via Vasco de Gama 5<br>20m dalla spiaggia<br><a href="' + baseHref + 'casa-bellavista-2">Vedi dettagli</a>');
  L.marker([39.8392, 18.2106], {icon: houseIcon}).addTo(map)
- .bindPopup('<b>Casa Giorgio 4</b><br>Via Vasco de Gama 7<br>40m dalla spiaggia<br><a href="casa-giorgio-4">Vedi dettagli</a>');
+ .bindPopup('<b>Casa Giorgio 4</b><br>Via Vasco de Gama 7<br>40m dalla spiaggia<br><a href="' + baseHref + 'casa-giorgio-4">Vedi dettagli</a>');
  L.marker([39.8392, 18.2106], {icon: houseIcon}).addTo(map)
- .bindPopup('<b>Casa Giorgio 6</b><br>Via Vasco de Gama 7<br>Vista mare primo piano<br><a href="casa-giorgio-6">Vedi dettagli</a>');
+ .bindPopup('<b>Casa Giorgio 6</b><br>Via Vasco de Gama 7<br>Vista mare primo piano<br><a href="' + baseHref + 'casa-giorgio-6">Vedi dettagli</a>');
  // Punti di interesse
 L.marker([39.8390, 18.2105], {icon: beachIcon}).addTo(map)
  .bindPopup('<b>Spiaggia Torre Pali</b><br>Sabbia fine e mare cristallino<br>Bandiera Blu');
@@ -754,7 +761,7 @@ L.marker([39.8390, 18.2105], {icon: beachIcon}).addTo(map)
  L.marker([39.8380, 18.2100], {icon: restaurantIcon}).addTo(map)
  .bindPopup('<b>Pizzeria</b><br>Pizza e specialità locali');
  L.marker([39.8372, 18.2095], {icon: towerIcon}).addTo(map)
- .bindPopup('<b>Torre di Torre Pali</b><br>Torre aragonese XVI secolo<br><a href="torre-pali">Scopri la storia</a>');
+ .bindPopup('<b>Torre di Torre Pali</b><br>Torre aragonese XVI secolo<br><a href="' + baseHref + 'torre-pali">Scopri la storia</a>');
  // Isola della Fanciulla
 L.marker([39.8372, 18.2085], {icon: L.divIcon({
  className: 'custom-icon',
@@ -762,10 +769,10 @@ L.marker([39.8372, 18.2085], {icon: L.divIcon({
  iconSize: [22, 22],
  iconAnchor: [11, 11]
 })}).addTo(map)
- .bindPopup('<b>Isola della Fanciulla</b><br>Isolotto roccioso raggiungibile a nuoto<br><a href="torre-pali">Leggi la leggenda</a>');
+ .bindPopup('<b>Isola della Fanciulla</b><br>Isolotto roccioso raggiungibile a nuoto<br><a href="' + baseHref + 'torre-pali">Leggi la leggenda</a>');
 }
 </script>
- <script is:inline src="/sudsalento/js/site-nav.js"></script>
+ <script is:inline src={withBase('js/site-nav.js')}></script>
  </BaseLayout>
  
 
