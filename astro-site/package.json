@@ -7,9 +7,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "seo:audit:docs": "node scripts/seo-audit-docs.mjs ../docs"
+    "seo:audit:docs": "node scripts/seo-audit-docs.mjs ../docs",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "images:optimize:dry": "node scripts/optimize-images.mjs --dry-run",
+    "images:webp": "node scripts/generate-webp.mjs",
+    "images:webp:dry": "node scripts/generate-webp.mjs --dry-run"
   },
   "dependencies": {
     "astro": "^5.4.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }

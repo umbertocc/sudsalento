@@ -8,6 +8,31 @@ Questo documento elenca tutti i miglioramenti implementati sul sito Spiagge del 
 
 ## ✅ Miglioramenti Completati
 
+### 0. **Aggiornamento SEO Social (Marzo 2026)**
+- ✅ Allineate le immagini social `og:image` e `twitter:image` alle localita con asset disponibili:
+  - `pescoluse` -> `/img/pescoluse/pescoluse.jpg`
+  - `lido-marini` -> `/img/lido-marini/lido-marini.jpg`
+  - `torre-vado` -> `/img/torre-vado/torrevado.jpg`
+- ✅ Per le pagine senza asset locale dedicato, impostato fallback coerente a `/img/logo.png` (evita anteprime fuorvianti con foto di altre localita).
+
+### 0.1 **Checklist Immagini OG Mancanti (Priorita)**
+Formato consigliato per nuovi asset:
+- percorso: `public/img/<slug>/<slug>.jpg`
+- dimensione: `1200x630` (preview social)
+- peso target: `< 250 KB`
+
+Alta priorita (localita principali ancora su logo):
+1. `torre-san-giovanni` -> creare `public/img/torre-san-giovanni/torre-san-giovanni.jpg`
+2. `porto-cesareo` -> creare `public/img/porto-cesareo/porto-cesareo.jpg`
+3. `punta-prosciutto` -> creare `public/img/punta-prosciutto/punta-prosciutto.jpg`
+4. `santa-maria-di-leuca` -> creare `public/img/santa-maria-di-leuca/santa-maria-di-leuca.jpg`
+
+Media priorita:
+1. `gallipoli` -> creare `public/img/gallipoli/gallipoli.jpg`
+2. `torre-mozza` -> creare `public/img/torre-mozza/torre-mozza.jpg`
+3. `marina-di-felloniche` -> creare `public/img/marina-di-felloniche/marina-di-felloniche.jpg`
+4. `castro` -> creare `public/img/castro/castro.jpg`
+
 ### 1. **Navigazione & UX**
 - ✅ **Navbar fisso** su tutte le pagine con menu: Home | Appartamenti | Torre Pali | FAQ | Contatti
 - ✅ **Footer** a 3 colonne (info, link, contatti) su tutte le pagine

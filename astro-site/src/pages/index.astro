@@ -36,12 +36,12 @@ const withBase = (path) => `${baseHref}${path.replace(/^\/+/, '')}`;
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Spiagge del Salento">
-<meta property="og:image" content="https://spiaggedelsalento.it/img/prospetto/prospetto_1.jpg">
+<meta property="og:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
 <!-- Twitter Card Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Guida Spiagge, Mare, Eventi e Appartamenti 2026 | Spiagge del Salento">
 <meta name="twitter:description" content="Scopri le spiagge più belle del Salento, eventi e consigli utili per organizzare la tua vacanza.">
-<meta name="twitter:image" content="https://spiaggedelsalento.it/img/prospetto/prospetto_1.jpg">
+<meta name="twitter:image" content="https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg">
 <!-- Favicon e Logo -->
 <link rel="icon" type="image/png" sizes="32x32" href="https://spiaggedelsalento.it/img/logo.png">
 <link rel="icon" type="image/png" sizes="192x192" href="https://spiaggedelsalento.it/img/logo.png">
@@ -243,7 +243,7 @@ h1 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); margin-bottom: 14px; font-weight: 
  "url": "https://spiaggedelsalento.it/",
  "logo": "https://spiaggedelsalento.it/img/logo.png",
  "image": [
- "https://spiaggedelsalento.it/img/prospetto/prospetto_1.jpg",
+ "https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg",
  "https://spiaggedelsalento.it/img/logo.png"
  ],
  "telephone": "+393804580135",
@@ -377,7 +377,7 @@ h1 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); margin-bottom: 14px; font-weight: 
 {
  "@context": "https://schema.org",
  "@type": "ImageObject",
- "contentUrl": "https://spiaggedelsalento.it/img/prospetto/prospetto_1.jpg",
+ "contentUrl": "https://spiaggedelsalento.it/img/torre-pali/torrepali.jpg",
  "caption": "Case vacanze Torre Pali - Vista esterna degli appartamenti a 20m dalla spiaggia Bandiera Blu",
  "description": "Prospetto esterno delle case vacanze a Torre Pali, Salento. Appartamenti moderni con WiFi, aria condizionata e parcheggio gratuito.",
  "author": {
@@ -443,7 +443,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
 <!-- Pescoluse -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/pescoluse/pescoluse.jpg" alt="Pescoluse - Maldive del Salento" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/pescoluse/pescoluse.webp" type="image/webp">
+<img src="img/pescoluse/pescoluse.jpg" alt="Pescoluse - Maldive del Salento" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Pescoluse</h3>
@@ -455,7 +458,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Torre Pali -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/torre-pali/torrepali.jpg" alt="Torre Pali - Spiaggia Bandiera Blu" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/torre-pali/torrepali.webp" type="image/webp">
+<img src="img/torre-pali/torrepali.jpg" alt="Torre Pali - Spiaggia Bandiera Blu" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre Pali</h3>
@@ -467,7 +473,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Lido Marini -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/lido-marini/lido-marini.jpg" alt="Lido Marini - Spiaggia tranquilla" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/lido-marini/lido-marini.webp" type="image/webp">
+<img src="img/lido-marini/lido-marini.jpg" alt="Lido Marini - Spiaggia tranquilla" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Lido Marini</h3>
@@ -479,7 +488,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Torre Vado -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src={withBase('img/torre-vado/torrevado.jpg')} alt="Torre Vado - Porto e calette" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset={withBase('img/torre-vado/torrevado.webp')} type="image/webp">
+<img src={withBase('img/torre-vado/torrevado.jpg')} alt="Torre Vado - Porto e calette" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre Vado</h3>
@@ -491,7 +503,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Santa Maria di Leuca -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/giardino/giardino_1.jpg" alt="Santa Maria di Leuca - Faro e Santuario" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/torre-pali/torrepali3.webp" type="image/webp">
+<img src="img/torre-pali/torrepali3.jpg" alt="Santa Maria di Leuca - Faro e Santuario" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Santa Maria di Leuca</h3>
@@ -503,7 +518,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Torre Mozza -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/casa-giorgio/cucina_1.jpg" alt="Torre Mozza - Spiaggia e Torre" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/pescoluse/pescoluse2.webp" type="image/webp">
+<img src="img/pescoluse/pescoluse2.jpg" alt="Torre Mozza - Spiaggia e Torre" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre Mozza</h3>
@@ -515,7 +533,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Torre San Giovanni -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/casa-bella-vista/soggiorno_1.jpg" alt="Torre San Giovanni - Porto Turistico" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/lido-marini/lido-marini.webp" type="image/webp">
+<img src="img/lido-marini/lido-marini.jpg" alt="Torre San Giovanni - Porto Turistico" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Torre San Giovanni</h3>
@@ -527,7 +548,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Punta Prosciutto -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src={withBase('img/torre-pali/torrepali3.jpg')} alt="Punta Prosciutto - Dune e Mare Caraibico" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset={withBase('img/torre-pali/torrepali3.webp')} type="image/webp">
+<img src={withBase('img/torre-pali/torrepali3.jpg')} alt="Punta Prosciutto - Dune e Mare Caraibico" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Punta Prosciutto</h3>
@@ -539,7 +563,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Porto Cesareo -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/casa-giorgio/prospetto.jpg" alt="Porto Cesareo - Riserva Marina" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/torre-pali/torrepali10.webp" type="image/webp">
+<img src="img/torre-pali/torrepali10.jpg" alt="Porto Cesareo - Riserva Marina" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Porto Cesareo</h3>
@@ -551,7 +578,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Castro -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/prospetto/prospetto_1.jpg" alt="Castro - Castello e Grotte" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/torre-pali/torrepali5.webp" type="image/webp">
+<img src="img/torre-pali/torrepali5.jpg" alt="Castro - Castello e Grotte" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Castro</h3>
@@ -563,7 +593,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Marina di Felloniche -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
 <div style="height: 200px; overflow: hidden; position: relative;">
-<img src="img/giardino/giardino_1.jpg" alt="Marina di Felloniche - Spiaggia Tranquilla" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+<picture>
+<source srcset="img/torre-vado/torrevado.webp" type="image/webp">
+<img src="img/torre-vado/torrevado.jpg" alt="Marina di Felloniche - Spiaggia Tranquilla" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
 </div>
 <div style="padding: 25px;">
 <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Marina di Felloniche</h3>
@@ -575,7 +608,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Gallipoli -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
  <div style="height: 200px; overflow: hidden; position: relative;">
- <img src="img/prospetto/prospetto_1.jpg" alt="Gallipoli - Spiagge e Movida" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+ <picture>
+<source srcset="img/pescoluse/pescoluse3.webp" type="image/webp">
+<img src="img/pescoluse/pescoluse3.jpg" alt="Gallipoli - Spiagge e Movida" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
  </div>
  <div style="padding: 25px;">
  <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Gallipoli</h3>
@@ -587,7 +623,10 @@ document.querySelectorAll('a[href*="casa-"]').forEach(link => {
  <!-- Porto Selvaggio -->
 <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s; position: relative;">
  <div style="height: 200px; overflow: hidden; position: relative;">
- <img src="img/prospetto/prospetto_1.jpg" alt="Porto Selvaggio - Parco Naturale" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+ <picture>
+<source srcset="img/torre-pali/torrepali6.webp" type="image/webp">
+<img src="img/torre-pali/torrepali6.jpg" alt="Porto Selvaggio - Parco Naturale" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+</picture>
  </div>
  <div style="padding: 25px;">
  <h3 style="font-size: 1.5em; color: #2c3e50; margin-bottom: 10px;">Porto Selvaggio</h3>

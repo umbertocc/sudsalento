@@ -7,3 +7,6 @@ astro-site/node_modules/
 
 # Logs
 *.log
+
+# Local image optimization backups
+astro-site/.image-backups/
