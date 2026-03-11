@@ -73,7 +73,7 @@ Media priorita:
 ### 6. **Correzioni Tecniche**
 - ✅ **Photo counter** dimensioni uniformi (14px fisso invece di 0.9em)
 - ✅ **Telefono aggiornato** a +39 380 458 01 35 su tutte le pagine
-- ✅ **URL migrati** da affitto.spiaggedelsalento.it a spiaggedelsalento.it
+- ✅ **URL migrati** da affitto.umbertocc.github.io/sudsalento a umbertocc.github.io/sudsalento
 
 ---
 
@@ -136,8 +136,8 @@ Media priorita:
 - **Schema.org** - Structured data per SEO
 
 ### Domini & Hosting
-- **Dominio principale:** spiaggedelsalento.it
-- **Email:** info@spiaggedelsalento.it (da acquistare su Aruba)
+- **Dominio principale:** umbertocc.github.io/sudsalento
+- **Email:** info@torrepalivacanze.it (da acquistare su Aruba)
 - **Hosting:** Da configurare (Apache/Nginx)
 - **HTTPS:** Da attivare con certificato SSL/TLS
 
@@ -147,8 +147,8 @@ Media priorita:
 
 Quando sei pronto per mettere online il sito:
 
-1. ☐ Acquista dominio spiaggedelsalento.it (se non già fatto)
-2. ☐ Acquista email info@spiaggedelsalento.it su Aruba
+1. ☐ Acquista dominio umbertocc.github.io/sudsalento (se non già fatto)
+2. ☐ Acquista email info@torrepalivacanze.it su Aruba
 3. ☐ Configura hosting (Apache consigliato per .htaccess)
 4. ☐ Carica cartella `docs/` sul server
 5. ☐ Attiva certificato SSL/TLS (Let's Encrypt gratuito)
@@ -168,8 +168,8 @@ Quando sei pronto per mettere online il sito:
 
 - **Telefono:** +39 380 458 01 35
 - **WhatsApp:** https://wa.me/393804580135
-- **Email:** info@spiaggedelsalento.it
-- **Sito:** https://spiaggedelsalento.it
+- **Email:** info@torrepalivacanze.it
+- **Sito:** https://umbertocc.github.io/sudsalento
 
 ---
 

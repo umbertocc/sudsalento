@@ -5,7 +5,7 @@
 Ho implementato tutte le configurazioni tecniche necessarie per far apparire il logo del tuo sito nei risultati di ricerca di Google:
 
 ### 1. **Favicon Completi su Tutte le Pagine**
-- ✅ Tag `<link rel="icon">` con URL assoluto (https://spiaggedelsalento.it/img/logo.png)
+- ✅ Tag `<link rel="icon">` con URL assoluto (https://umbertocc.github.io/sudsalento/img/logo.png)
 - ✅ Più formati: 32x32, 192x192, 180x180 pixel
 - ✅ Apple Touch Icon per dispositivi iOS
 - ✅ Shortcut icon per compatibilità browser
@@ -22,7 +22,7 @@ Già presente nell'index.html:
 {
   "@type": "Organization",
   "name": "Spiagge del Salento",
-  "logo": "https://spiaggedelsalento.it/img/logo.png"
+  "logo": "https://umbertocc.github.io/sudsalento/img/logo.png"
 }
 ```
 
@@ -51,17 +51,17 @@ Devi caricare questi file sul tuo hosting:
 
 Dopo aver caricato i file:
 
-1. **Vai su:** https://spiaggedelsalento.it
+1. **Vai su:** https://umbertocc.github.io/sudsalento
 2. **Controlla nella barra del browser:**
    - Dovresti vedere il tuo logo/favicon nella tab
    - Se non lo vedi subito, svuota la cache del browser (Ctrl+Shift+R)
 
 3. **Verifica favicon:**
-   - Vai su: https://spiaggedelsalento.it/img/logo.png
+   - Vai su: https://umbertocc.github.io/sudsalento/img/logo.png
    - Assicurati che l'immagine si carichi correttamente
 
 4. **Verifica manifest:**
-   - Vai su: https://spiaggedelsalento.it/manifest.json
+   - Vai su: https://umbertocc.github.io/sudsalento/manifest.json
    - Dovresti vedere il file JSON con le icone
 
 ---
@@ -75,7 +75,7 @@ Per far apparire il logo su Google, devi:
 Se NON l'hai già fatto:
 1. Vai su: https://search.google.com/search-console
 2. Clicca su "Aggiungi proprietà"
-3. Inserisci: `https://spiaggedelsalento.it`
+3. Inserisci: `https://umbertocc.github.io/sudsalento`
 4. Segui la procedura di verifica (tag HTML o file)
 
 ### 2. **Richiedi Indicizzazione**
@@ -83,17 +83,17 @@ Se NON l'hai già fatto:
 Dopo aver caricato i file aggiornati:
 1. Vai su Google Search Console
 2. Vai su: **Controllo URL** (nella barra in alto)
-3. Inserisci: `https://spiaggedelsalento.it`
+3. Inserisci: `https://umbertocc.github.io/sudsalento`
 4. Clicca su **"Richiedi indicizzazione"**
 5. Ripeti per le pagine principali:
-   - `https://spiaggedelsalento.it/casa-bellavista-2.html`
-   - `https://spiaggedelsalento.it/casa-giorgio-4.html`
-   - `https://spiaggedelsalento.it/casa-giorgio-6.html`
+   - `https://umbertocc.github.io/sudsalento/casa-bellavista-2.html`
+   - `https://umbertocc.github.io/sudsalento/casa-giorgio-4.html`
+   - `https://umbertocc.github.io/sudsalento/casa-giorgio-6.html`
 
 ### 3. **Controlla i Dati Strutturati**
 
 1. Vai su: https://search.google.com/test/rich-results
-2. Inserisci: `https://spiaggedelsalento.it`
+2. Inserisci: `https://umbertocc.github.io/sudsalento`
 3. Clicca su "Testa URL"
 4. Verifica che Google veda il logo nell'Organization schema
 
@@ -122,9 +122,9 @@ Dopo aver caricato i file aggiornati:
 Spunta quando hai completato:
 
 - [ ] **File caricati** sul server (tutti gli HTML + manifest.json)
-- [ ] **Favicon visibile** nel browser su https://spiaggedelsalento.it
-- [ ] **Logo accessibile** su https://spiaggedelsalento.it/img/logo.png
-- [ ] **Manifest accessibile** su https://spiaggedelsalento.it/manifest.json
+- [ ] **Favicon visibile** nel browser su https://umbertocc.github.io/sudsalento
+- [ ] **Logo accessibile** su https://umbertocc.github.io/sudsalento/img/logo.png
+- [ ] **Manifest accessibile** su https://umbertocc.github.io/sudsalento/manifest.json
 - [ ] **Sito verificato** su Google Search Console
 - [ ] **Indicizzazione richiesta** per homepage e pagine principali
 - [ ] **Dati strutturati testati** su Rich Results Test
@@ -136,11 +136,11 @@ Spunta quando hai completato:
 ### ❌ "Non vedo ancora il favicon nel browser"
 - Svuota la cache: **Ctrl+Shift+R** (Windows) o **Cmd+Shift+R** (Mac)
 - Prova in modalità incognito
-- Verifica che il file sia caricato su: https://spiaggedelsalento.it/img/logo.png
+- Verifica che il file sia caricato su: https://umbertocc.github.io/sudsalento/img/logo.png
 
 ### ❌ "Il manifest.json non si carica"
 - Verifica di aver caricato il file nella cartella `docs/`
-- Verifica che sia accessibile su: https://spiaggedelsalento.it/manifest.json
+- Verifica che sia accessibile su: https://umbertocc.github.io/sudsalento/manifest.json
 - Controlla che il server non blocchi i file `.json` (in alcuni hosting va configurato)
 
 ### ❌ "È passato 1 mese e ancora niente logo su Google"
@@ -172,9 +172,9 @@ Se dopo 4 settimane il logo non appare ancora:
 
 1. **Controlla Google Search Console** per errori
 2. **Testa i dati strutturati** su Rich Results Test
-3. **Verifica che il sito sia indicizzato** (cerca su Google: `site:spiaggedelsalento.it`)
+3. **Verifica che il sito sia indicizzato** (cerca su Google: `site:umbertocc.github.io/sudsalento`)
 4. **Assicurati che robots.txt non blocchi il logo:**
-   - https://spiaggedelsalento.it/robots.txt
+   - https://umbertocc.github.io/sudsalento/robots.txt
    - Deve consentire l'accesso a `/img/`
 
 ---
