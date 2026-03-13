@@ -6,6 +6,7 @@ Allow: /
 Disallow: /logo-generator
 Disallow: /logo-generator.html
 
+# Specify sitemap location
 Sitemap: https://umbertocc.github.io/sudsalento/sitemap.xml
 
 # Crawl delay (optional - in seconds)
