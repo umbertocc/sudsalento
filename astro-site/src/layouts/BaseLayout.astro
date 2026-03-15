@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
-<!-- End Google Tag Manager -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<slot name="head" />
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FP79B56"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<slot />
-</body>
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5FP79B56');</script>
+		<!-- End Google Tag Manager -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<slot name="head" />
+		<style>
+			html, body {
+				min-height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: 'Poppins', Arial, sans-serif;
+				background: url('/img/sfondo-mare-2.jpg') top center no-repeat, linear-gradient(135deg, #e0f2fe 0%, #f7fbff 60%, #fff 100%);
+				background-size: cover, auto;
+				color: #1e293b;
+				font-size: 1.08em;
+				line-height: 1.7;
+				min-height: 100vh;
+				padding-top: 0;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			main {
+				background: rgba(255,255,255,0.95);
+				border-radius: 22px;
+				box-shadow: 0 8px 32px rgba(14,165,233,0.08);
+				padding: 32px 18px 48px;
+				margin: 32px auto 48px auto;
+				max-width: 980px;
+			}
+			@media (max-width: 700px) {
+				main {
+					padding: 18px 2vw 32px;
+					margin: 16px 0 32px 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FP79B56"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<slot />
+	</body>
 </html>

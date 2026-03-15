@@ -115,7 +115,7 @@ Media priorita:
 
 ### File Modificati
 - `docs/index.html` - Homepage con navbar, footer, badges, GA4
-- `docs/casa-bellavista-2.html` - Proprietà con breadcrumb, social share
+- `docs/casa-bellavista.html` - Proprietà con breadcrumb, social share
 - `docs/casa-giorgio-4.html` - Proprietà con breadcrumb, social share
 - `docs/casa-giorgio-6.html` - Proprietà con breadcrumb, social share
 - `docs/torre-pali.html` - Guida completa Torre Pali

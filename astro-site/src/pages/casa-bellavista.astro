@@ -1,0 +1,185 @@
+---
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout>
+  <Fragment slot="head">
+    <title>Casa Bella Vista – Torre Pali | Affitti Salento</title>
+    <meta name="description" content="Casa Bella Vista a Torre Pali: quadrilocale a 20 metri dalla spiaggia, 3 camere, 2 bagni, area esterna, aria condizionata. Galleria foto e dettagli." />
+    <link rel="canonical" href="https://umbertocc.github.io/sudsalento/casa-bellavista" />
+  </Fragment>
+  <SiteNav />
+  <main style="max-width:900px; margin:0 auto; padding:32px 16px 48px; min-height:60vh;">
+    <h1 style="font-size:2em; color:#1e293b; margin-top:58px; margin-bottom:18px;">Casa Bella Vista – Torre Pali - Salento</h1>
+    <p style="font-size:0.98em; color:#64748b; margin-bottom:10px;">CIN: IT075066C200071298 – CIS: LE0750669100003109</p>
+    <p style="font-size:1.1em; color:#334155; margin-bottom:24px;">Ampio quadrilocale piano terra a soli 20 metri dalla spiaggia sabbiosa. Ideale per famiglie e gruppi: 3 camere, 2 bagni, area esterna attrezzata, aria condizionata, lavatrice. Vicinissima a tutti i servizi e alle Maldive del Salento.</p>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="font-size:1.15em; color:#1e293b; margin-bottom:12px;">Galleria Foto</h2>
+      <div class="gallery-grid">
+        <img src="/sudsalento/img/casa-bellavista/prospetto.webp" alt="Prospetto Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/prospetto_2.webp" alt="Prospetto 2 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/prospetto-mobile.webp" alt="Prospetto mobile Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/cortile.webp" alt="Cortile Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/giardino_1.webp" alt="Giardino 1 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/giardino_2.webp" alt="Giardino 2 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/giardino_3.webp" alt="Giardino 3 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/giardino_4.webp" alt="Giardino 4 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/soggiorno_1.webp" alt="Soggiorno 1 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/soggiorno_2.webp" alt="Soggiorno 2 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/soggiorno_3.webp" alt="Soggiorno 3 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/cucina.webp" alt="Cucina Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/prima_camera_1.webp" alt="Prima camera 1 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/prima_camera_2.webp" alt="Prima camera 2 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/prima_camera_3.webp" alt="Prima camera 3 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/seconda_camera.webp" alt="Seconda camera Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/seconda_camera_2.webp" alt="Seconda camera 2 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/seconda_camera_5.webp" alt="Seconda camera 5 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/seconda_camera_6.webp" alt="Seconda camera 6 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/terza_camera_2.webp" alt="Terza camera 2 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/terza_camera_4.webp" alt="Terza camera 4 Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/primo_bagno.webp" alt="Primo bagno Casa Bella Vista">
+        <img src="/sudsalento/img/casa-bellavista/secondo_bagno.webp" alt="Secondo bagno Casa Bella Vista">
+      </div>
+      <div id="modal" class="modal" style="display:none;">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImg" src="" alt="Foto ingrandita">
+      </div>
+      <style>
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 16px;
+          margin-top: 10px;
+        }
+        .gallery-grid img {
+          width: 100%;
+          height: 140px;
+          object-fit: cover;
+          border-radius: 10px;
+          box-shadow: 0 2px 12px rgba(14,165,233,0.08);
+          transition: transform 0.2s, opacity 0.7s;
+          cursor: pointer;
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        .gallery-grid img.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .gallery-grid img:hover {
+          transform: scale(1.04);
+          box-shadow: 0 4px 18px rgba(14,165,233,0.18);
+        }
+        @media (max-width: 600px) {
+          .gallery-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .gallery-grid img {
+            height: 90px;
+          }
+        }
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 9999;
+          padding-top: 60px;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          overflow: auto;
+          background-color: rgba(0,0,0,0.85);
+        }
+        .modal-content {
+          margin: auto;
+          display: block;
+          max-width: 90vw;
+          max-height: 80vh;
+          border-radius: 12px;
+          box-shadow: 0 4px 32px rgba(14,165,233,0.18);
+        }
+        .close {
+          position: absolute;
+          top: 24px;
+          right: 38px;
+          color: #fff;
+          font-size: 2.5em;
+          font-weight: bold;
+          cursor: pointer;
+          z-index: 10001;
+          text-shadow: 0 2px 8px #000;
+        }
+        .close:hover { color: #38bdf8; }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const images = document.querySelectorAll('.gallery-grid img');
+          const modal = document.getElementById('modal');
+          const modalImg = document.getElementById('modalImg');
+          const closeModal = document.getElementById('closeModal');
+          images.forEach(img => {
+            img.addEventListener('click', function() {
+              modal.style.display = 'block';
+              modalImg.src = this.src;
+              modalImg.alt = this.alt;
+            });
+          });
+          closeModal.onclick = function() {
+            modal.style.display = 'none';
+            modalImg.src = '';
+          };
+          window.onclick = function(event) {
+            if (event.target === modal) {
+              modal.style.display = 'none';
+              modalImg.src = '';
+            }
+          };
+
+          const revealImages = () => {
+            images.forEach(img => {
+              const rect = img.getBoundingClientRect();
+              if (rect.top < window.innerHeight - 40) {
+                img.classList.add('visible');
+              }
+            });
+          };
+          revealImages();
+          window.addEventListener('scroll', revealImages);
+        });
+      </script>
+    </section>
+    <section style="margin-bottom:32px;">
+      <h2 style="font-size:1.1em; color:#1e293b; margin-bottom:10px;">Indirizzo</h2>
+      <p style="color:#334155; font-size:1em; margin-bottom:18px;">Via Vasco de Gama, 5, Torre Pali (LE)</p>
+      <div style="margin-bottom:18px;">
+        <iframe
+          src="https://www.google.com/maps?q=Via+Vasco+de+Gama+5,+Torre+Pali,+Salve+LE,+Italia&output=embed"
+          width="100%" height="280" style="border:0; border-radius:12px; box-shadow:0 2px 12px rgba(14,165,233,0.10);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mappa Casa Bella Vista"
+        ></iframe>
+      </div>
+    </section>
+    <section style="margin-bottom:32px;">
+      <h2 style="font-size:1.1em; color:#1e293b; margin-bottom:10px;">Caratteristiche</h2>
+      <ul style="color:#334155; font-size:1em; margin-left:18px; margin-bottom:18px;">
+        <li>3 camere da letto</li>
+        <li>2 bagni</li>
+        <li>Area esterna attrezzata</li>
+        <li>Aria condizionata</li>
+        <li>Lavatrice</li>
+        <li>20 metri dalla spiaggia</li>
+        <li>Vicino a tutti i servizi</li>
+      </ul>
+    </section>
+    <section>
+      <h2 style="font-size:1.1em; color:#1e293b; margin-bottom:10px;">Richiedi Disponibilità</h2>
+      <a href="/sudsalento/contatti" style="display:inline-block; background:#0ea5e9; color:#fff; padding:12px 28px; border-radius:8px; text-decoration:none; font-weight:600;">Contattaci per questa casa</a>
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>

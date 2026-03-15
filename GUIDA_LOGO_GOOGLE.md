@@ -9,7 +9,7 @@ Ho implementato tutte le configurazioni tecniche necessarie per far apparire il 
 - ✅ Più formati: 32x32, 192x192, 180x180 pixel
 - ✅ Apple Touch Icon per dispositivi iOS
 - ✅ Shortcut icon per compatibilità browser
-- ✅ **7 pagine aggiornate:** index, casa-bellavista-2, casa-giorgio-4, casa-giorgio-6, faq, contatti, privacy, torre-pali
+- ✅ **7 pagine aggiornate:** index, casa-bellavista, casa-giorgio-4, casa-giorgio-6, faq, contatti, privacy, torre-pali
 
 ### 2. **Web App Manifest (manifest.json)**
 - ✅ File `manifest.json` creato nella cartella `docs/`
@@ -36,7 +36,7 @@ Devi caricare questi file sul tuo hosting:
 
 1. **File modificati:**
    - `docs/index.html` *(favicon aggiornati)*
-   - `docs/casa-bellavista-2.html` *(favicon aggiornati)*
+   - `docs/casa-bellavista.html` *(favicon aggiornati)*
    - `docs/casa-giorgio-4.html` *(favicon aggiornati)*
    - `docs/casa-giorgio-6.html` *(favicon aggiornati)*
    - `docs/faq.html` *(favicon aggiornati)*
@@ -86,7 +86,7 @@ Dopo aver caricato i file aggiornati:
 3. Inserisci: `https://umbertocc.github.io/sudsalento`
 4. Clicca su **"Richiedi indicizzazione"**
 5. Ripeti per le pagine principali:
-   - `https://umbertocc.github.io/sudsalento/casa-bellavista-2.html`
+   - `https://umbertocc.github.io/sudsalento/casa-bellavista.html`
    - `https://umbertocc.github.io/sudsalento/casa-giorgio-4.html`
    - `https://umbertocc.github.io/sudsalento/casa-giorgio-6.html`
 
