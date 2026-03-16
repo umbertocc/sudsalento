@@ -92,10 +92,14 @@ header h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); margin-bottom: 12px; font-wei
  .info-grid { grid-template-columns: 1fr; }
  .features-list { grid-template-columns: 1fr; }
  .content-section { padding: 24px 16px; border-radius: 16px; margin-bottom: 20px; }
+.hero-gallery { grid-template-columns: repeat(2, 1fr); }
+ .hero-gallery img { height: 150px; }
 }
 @media (max-width: 480px) {
  .container { padding: 14px 10px 20px; }
  .btn { width: 100%; margin: 6px 0; text-align: center; }
+ .hero-gallery { grid-template-columns: 1fr; gap: 10px; }
+ .hero-gallery img { height: 190px; }
 }
 </style>
  </Fragment>
