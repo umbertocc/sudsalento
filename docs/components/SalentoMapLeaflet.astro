@@ -1,0 +1,19 @@
+---
+// SalentoMapLeaflet.astro: mappa interattiva del Salento con Leaflet e OpenStreetMap
+---
+<section style="padding: 20px; text-align: center;">
+  <h2>Mappa interattiva del Salento</h2>
+  <div id="salento-leaflet-map" style="width:100%;max-width:700px;height:420px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);"></div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var map = L.map('salento-leaflet-map').setView([40.145638, 17.730102], 9);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      // Marker rimossi: solo mappa base
+    });
+  </script>
+  <p style="font-size: 0.95em; color: #555; margin-top: 12px;">Mappa interattiva realizzata con <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> e <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a>.</p>
+</section>
