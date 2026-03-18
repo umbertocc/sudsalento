@@ -108,7 +108,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-</urlset>
   <url>
     <loc>https://umbertocc.github.io/sudsalento/affitti-salento</loc>
     <lastmod>2026-03-15</lastmod>
@@ -116,4 +115,4 @@
     <priority>0.8</priority>
   </url>
 </urlset>
-</urlset>
+
