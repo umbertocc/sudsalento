@@ -167,7 +167,7 @@ Quando sei pronto per mettere online il sito:
 ## 📞 Contatti
 
 - **Telefono:** +39 380 458 01 35
-- **WhatsApp:** https://wa.me/393804580135
+- **WhatsApp:** https://wa.me/393886587080
 - **Email:** info@torrepalivacanze.it
 - **Sito:** https://umbertocc.github.io/sudsalento
 
