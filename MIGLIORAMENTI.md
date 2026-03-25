@@ -72,7 +72,7 @@ Media priorita:
 
 ### 6. **Correzioni Tecniche**
 - ✅ **Photo counter** dimensioni uniformi (14px fisso invece di 0.9em)
-- ✅ **Telefono aggiornato** a +39 388 658 70 80  su tutte le pagine
+- ✅ **Telefono aggiornato** a +39 380 458 01 35 su tutte le pagine
 - ✅ **URL migrati** da affitto.umbertocc.github.io/sudsalento a umbertocc.github.io/sudsalento
 
 ---
@@ -166,8 +166,8 @@ Quando sei pronto per mettere online il sito:
 
 ## 📞 Contatti
 
-- **Telefono:** +39 388 658 70 80 
-- **WhatsApp:** https://wa.me/393886587080
+- **Telefono:** +39 380 458 01 35
+- **WhatsApp:** https://wa.me/393804580135
 - **Email:** info@torrepalivacanze.it
 - **Sito:** https://umbertocc.github.io/sudsalento
 
