@@ -3,8 +3,11 @@ User-agent: *
 Allow: /
 
 # Disallow crawling of internal/private paths (if any)
+
 Disallow: /logo-generator
 Disallow: /logo-generator.html
+Disallow: /casa-giorgio
+Disallow: /casa-giorgio.html
 
 # Specify sitemap location
 Sitemap: https://umbertocc.github.io/sudsalento/sitemap.xml
