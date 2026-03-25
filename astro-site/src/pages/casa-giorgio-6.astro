@@ -38,7 +38,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div id="modal" class="modal" style="display:none;">
         <span class="close" id="closeModal">&times;</span>
+        <button id="prevImg" class="modal-nav" style="left:18px;">&#10094;</button>
         <img class="modal-content" id="modalImg" src="" alt="Foto ingrandita">
+        <button id="nextImg" class="modal-nav" style="right:18px;">&#10095;</button>
       </div>
       <style>
         .gallery-grid {
@@ -94,6 +96,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           border-radius: 12px;
           box-shadow: 0 4px 32px rgba(14,165,233,0.18);
         }
+        .modal-nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(14,165,233,0.7);
+          border: none;
+          color: #fff;
+          font-size: 2.2em;
+          padding: 0 16px;
+          border-radius: 8px;
+          cursor: pointer;
+          z-index: 10001;
+          transition: background 0.2s;
+        }
+        .modal-nav:hover {
+          background: #0284c7;
+        }
         .close {
           position: absolute;
           top: 24px;
@@ -109,17 +128,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </style>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          const images = document.querySelectorAll('.gallery-grid img');
+          const images = Array.from(document.querySelectorAll('.gallery-grid img'));
           const modal = document.getElementById('modal');
           const modalImg = document.getElementById('modalImg');
           const closeModal = document.getElementById('closeModal');
-          images.forEach(img => {
+          const prevBtn = document.getElementById('prevImg');
+          const nextBtn = document.getElementById('nextImg');
+          let currentIndex = 0;
+
+          function showModal(index) {
+            currentIndex = index;
+            modal.style.display = 'block';
+            modalImg.src = images[index].src;
+            modalImg.alt = images[index].alt;
+          }
+
+          images.forEach((img, idx) => {
             img.addEventListener('click', function() {
-              modal.style.display = 'block';
-              modalImg.src = this.src;
-              modalImg.alt = this.alt;
+              showModal(idx);
             });
           });
+
+          function showNext() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showModal(currentIndex);
+          }
+          function showPrev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showModal(currentIndex);
+          }
+
+          nextBtn.onclick = showNext;
+          prevBtn.onclick = showPrev;
+
           closeModal.onclick = function() {
             modal.style.display = 'none';
             modalImg.src = '';
@@ -130,6 +171,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               modalImg.src = '';
             }
           };
+
+          window.addEventListener('keydown', function(e) {
+            if (modal.style.display === 'block') {
+              if (e.key === 'ArrowRight') showNext();
+              if (e.key === 'ArrowLeft') showPrev();
+              if (e.key === 'Escape') closeModal.onclick();
+            }
+          });
+
           // Fade-in on scroll
           const revealImages = () => {
             images.forEach(img => {
